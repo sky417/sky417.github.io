@@ -3,16 +3,16 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle:
+title: Procrastinate for life
+subtitle: 
 description:
-author: John Doe
+author: Andrew Yoon
 language:
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://sky417.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -67,5 +67,8 @@ theme: landscape
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
-deploy:
-  type:
+deploy: 
+  type: git
+  repo: https://sky417@github.com/sky417/sky417.github.io.git
+  branch: master
+
