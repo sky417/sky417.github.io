@@ -1,1 +1,1 @@
-Fun place
+Let's log fun stuff
