@@ -1,3 +1,3 @@
 Fun place!
 
-https://sky417.github.io/blog/
+[Blog](https://sky417.github.io/blog/)
