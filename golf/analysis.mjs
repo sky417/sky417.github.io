@@ -36,7 +36,8 @@ export function validateRounds(rounds) {
       if (round[key] !== null) requireNumber(round[key], `${label}: ${key}`, { max: 100 });
     }
     if (round.scoreValue !== null) requireNumber(round.scoreValue, `${label}: Score Value`, { min: -20 });
-    if (round.adjustedGross !== null) requireNumber(round.adjustedGross, `${label}: adjusted gross`, { min: 18, integer: true });
+    if (round.adjustedGross != null) requireNumber(round.adjustedGross, `${label}: adjusted gross`, { min: 18, integer: true });
+    if (round.estimatedLostStrokes != null) requireNumber(round.estimatedLostStrokes, `${label}: estimated lost strokes`, { min: 0 });
     if (round.holes === null) continue;
     if (!Array.isArray(round.holes) || round.holes.length !== 18) throw new Error(`${label}: incomplete hole detail.`);
     requireGrid(round.holes.map((hole) => hole.par), `${label}: par`, { min: 3, max: 6, integer: true });
@@ -45,14 +46,34 @@ export function validateRounds(rounds) {
     round.holes.forEach((hole, index) => {
       if (hole.number !== index + 1) throw new Error(`${label}: holes must be ordered 1 through 18.`);
       if (hole.putts > hole.strokes) throw new Error(`${label}: putts exceed strokes at hole ${hole.number}.`);
-      if (hole.yards !== null) requireNumber(hole.yards, `${label}: yards`, { min: 1, integer: true });
-      if (hole.gir !== null && typeof hole.gir !== 'boolean') throw new Error(`${label}: GIR must be true, false, or null.`);
-      if (hole.teeAccuracy !== null && !['hit', 'left', 'right', 'short', 'long', 'missed', 'unknown'].includes(hole.teeAccuracy)) {
+      if (hole.yards != null) requireNumber(hole.yards, `${label}: yards`, { min: 1, integer: true });
+      if (hole.strokeIndex != null) requireNumber(hole.strokeIndex, `${label}: stroke index`, { min: 1, max: 18, integer: true });
+      if (hole.adjustedStrokes != null) requireNumber(hole.adjustedStrokes, `${label}: adjusted strokes`, { min: 1, integer: true });
+      if (hole.adjustedStrokes != null && hole.adjustedStrokes > hole.strokes) {
+        throw new Error(`${label}: adjusted strokes exceed gross strokes at hole ${hole.number}.`);
+      }
+      if (hole.gir != null && typeof hole.gir !== 'boolean') throw new Error(`${label}: GIR must be true, false, or null.`);
+      if (hole.teeAccuracy != null && !['hit', 'left', 'right', 'short', 'long', 'missed', 'unknown'].includes(hole.teeAccuracy)) {
         throw new Error(`${label}: unsupported tee accuracy at hole ${hole.number}.`);
+      }
+      if (hole.penaltyCodes != null && (typeof hole.penaltyCodes !== 'string' || !/^[SFHOD]*$/.test(hole.penaltyCodes))) {
+        throw new Error(`${label}: unsupported event codes at hole ${hole.number}.`);
       }
     });
     if (sum(round.holes.map((hole) => hole.strokes)) !== round.score) throw new Error(`${label}: hole strokes do not match gross score.`);
     if (sum(round.holes.map((hole) => hole.putts)) !== round.putts) throw new Error(`${label}: hole putts do not match round putts.`);
+    const hasAdjustedStrokes = round.holes.some((hole) => hole.adjustedStrokes != null);
+    if (hasAdjustedStrokes) {
+      if (round.holes.some((hole) => hole.adjustedStrokes == null)) throw new Error(`${label}: adjusted strokes must cover all 18 holes when provided.`);
+      if (round.adjustedGross == null) throw new Error(`${label}: adjusted strokes require a displayed adjusted gross total.`);
+      if (sum(round.holes.map((hole) => hole.adjustedStrokes)) !== round.adjustedGross) {
+        throw new Error(`${label}: adjusted hole strokes do not match displayed adjusted gross.`);
+      }
+    }
+    const fullHoleGir = round.holes.every((hole) => typeof hole.gir === 'boolean');
+    if (fullHoleGir && round.gir !== null && Math.round(percent(round.holes.filter((hole) => hole.gir).length, 18)) !== Math.round(round.gir)) {
+      throw new Error(`${label}: full hole GIR does not match rounded round GIR.`);
+    }
   }
   return rounds;
 }
@@ -172,7 +193,7 @@ export function analyze(rounds) {
       par: group[0].par, rounds: group.length,
     });
   }
-  const directionHoles = allHoles.filter((hole) => hole.teeAccuracy !== null);
+  const directionHoles = allHoles.filter((hole) => hole.teeAccuracy != null);
   const directions = ['hit', 'left', 'right', 'short', 'long', 'missed', 'unknown'].map((direction) => ({
     direction, count: directionHoles.filter((hole) => hole.teeAccuracy === direction).length,
   }));

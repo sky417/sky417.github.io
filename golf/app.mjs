@@ -61,6 +61,14 @@ const mean = (values) => values.length ? values.reduce((sum, value) => sum + val
 const sum = (values) => values.reduce((total, value) => total + value, 0);
 const roundKey = roundIdentity;
 const allResearch = () => Array.isArray(state.payload?.research?.courses) ? state.payload.research.courses : [];
+const eventCodeGuide = {
+  url: 'https://prd-webflow.thegrint.com/range/post/how-to-add-your-golf-score-using-thegrint',
+  title: 'TheGrint score entry guide',
+};
+const lostStrokesGuide = {
+  url: 'https://thegrint.com/range/post/thegrint-golf-scorecard-penalties',
+  title: 'TheGrint lost-strokes estimate guide',
+};
 
 function safeUrl(value) {
   try {
@@ -155,7 +163,7 @@ function renderHero(report) {
     : 0;
   setHtml(dom.heroMeta, `
     <span class="meta-chip">Through ${escapeHtml(formatDate(through))}</span>
-    <span class="coverage-badge">${report.summary.detailed} of ${report.summary.count} rounds have hole detail · ${number(coverage, 0)}%</span>
+    <span class="coverage-badge">${report.summary.detailed} of ${report.summary.count} rounds have score/putt hole detail · ${number(coverage, 0)}%</span>
   `);
 }
 
@@ -246,7 +254,7 @@ function renderOverview(report) {
     <div class="coverage-strip">
       <strong>Detail coverage</strong>
       <div class="coverage-track" aria-hidden="true"><span style="width:${Math.max(0, Math.min(100, coverage))}%"></span></div>
-      <p>${summary.detailed} detailed / ${summary.count} total rounds. Hole analysis excludes the other ${summary.count - summary.detailed}; missing detail is never treated as zero.</p>
+      <p>${summary.detailed} score/putt grids / ${summary.count} total rounds. Hole analysis excludes the other ${summary.count - summary.detailed}; supplementary fields may have different coverage and are never treated as zero.</p>
     </div>
   `);
 }
@@ -513,33 +521,103 @@ function selectedRoundHtml(report) {
   const backScore = sum(round.holes.slice(9).map((hole) => hole.strokes));
   const frontPutts = sum(round.holes.slice(0, 9).map((hole) => hole.putts));
   const backPutts = sum(round.holes.slice(9).map((hole) => hole.putts));
+  const numericSummary = (values) => values.every(Number.isFinite) ? sum(values) : 'Unknown';
+  const girSummary = (values) => values.every((value) => typeof value === 'boolean')
+    ? `${values.filter(Boolean).length}/${values.length}`
+    : 'Unknown';
+  const directionLabels = {
+    hit: 'Hit', left: 'Left', right: 'Right', short: 'Short', long: 'Long', missed: 'Missed', unknown: 'Unknown',
+  };
+  const unknown = (value) => value == null ? 'Unknown' : value;
   const rows = [
-    { label: 'Par', values: round.holes.map((hole) => hole.par), out: sum(round.holes.slice(0, 9).map((hole) => hole.par)), in: sum(round.holes.slice(9).map((hole) => hole.par)), total: sum(round.holes.map((hole) => hole.par)) },
-    { label: 'Gross', values: round.holes.map((hole) => hole.strokes), out: frontScore, in: backScore, total: round.score },
-    { label: 'Putts', values: round.holes.map((hole) => hole.putts), out: frontPutts, in: backPutts, total: round.putts },
+    {
+      label: 'Par',
+      values: round.holes.map((hole) => hole.par),
+      out: sum(round.holes.slice(0, 9).map((hole) => hole.par)),
+      in: sum(round.holes.slice(9).map((hole) => hole.par)),
+      total: sum(round.holes.map((hole) => hole.par)),
+    },
+    {
+      label: 'Gross',
+      values: round.holes.map((hole) => hole.strokes),
+      out: frontScore,
+      in: backScore,
+      total: round.score,
+    },
+    {
+      label: 'Putts',
+      values: round.holes.map((hole) => hole.putts),
+      out: frontPutts,
+      in: backPutts,
+      total: round.putts,
+    },
+    {
+      label: 'Yards',
+      values: round.holes.map((hole) => unknown(hole.yards)),
+      out: numericSummary(round.holes.slice(0, 9).map((hole) => hole.yards)),
+      in: numericSummary(round.holes.slice(9).map((hole) => hole.yards)),
+      total: numericSummary(round.holes.map((hole) => hole.yards)),
+    },
+    {
+      label: 'Stroke index',
+      values: round.holes.map((hole) => unknown(hole.strokeIndex)),
+      out: '—',
+      in: '—',
+      total: '—',
+    },
+    {
+      label: 'Adjusted',
+      values: round.holes.map((hole) => unknown(hole.adjustedStrokes)),
+      out: numericSummary(round.holes.slice(0, 9).map((hole) => hole.adjustedStrokes)),
+      in: numericSummary(round.holes.slice(9).map((hole) => hole.adjustedStrokes)),
+      total: numericSummary(round.holes.map((hole) => hole.adjustedStrokes)),
+    },
+    {
+      label: 'Tee direction',
+      values: round.holes.map((hole) => hole.teeAccuracy == null ? 'Unknown' : directionLabels[hole.teeAccuracy]),
+      out: '—',
+      in: '—',
+      total: '—',
+    },
+    {
+      label: 'GIR',
+      values: round.holes.map((hole) => hole.gir === true ? 'Yes' : hole.gir === false ? 'No' : 'Unknown'),
+      out: girSummary(round.holes.slice(0, 9).map((hole) => hole.gir)),
+      in: girSummary(round.holes.slice(9).map((hole) => hole.gir)),
+      total: girSummary(round.holes.map((hole) => hole.gir)),
+    },
+    {
+      label: 'Events',
+      values: round.holes.map((hole) => hole.penaltyCodes == null ? 'Unknown' : hole.penaltyCodes === '' ? 'None' : hole.penaltyCodes),
+      out: '—',
+      in: '—',
+      total: '—',
+    },
   ];
   return `
     <div class="panel panel--flush" id="selected-scorecard" tabindex="-1" role="region" aria-label="Selected round scorecard">
       <div class="scorecard-summary">
         <div>
           <h3>${escapeHtml(round.course)} · ${escapeHtml(formatDate(round.date))}</h3>
-          <p>${escapeHtml(round.tee)} tee · gross scorecard</p>
+          <p>${escapeHtml(round.tee)} tee · gross scorecard and recorded supplemental fields</p>
         </div>
         <div class="scorecard-summary__totals">
           <span>Front<strong>${frontScore}</strong></span>
           <span>Back<strong>${backScore}</strong></span>
           <span>Gross<strong>${round.score}</strong></span>
-          ${round.adjustedGross !== null ? `<span>Adjusted<strong>${round.adjustedGross}</strong></span>` : ''}
+          ${round.adjustedGross != null ? `<span>Adjusted<strong>${escapeHtml(round.adjustedGross)}</strong></span>` : ''}
         </div>
       </div>
       <div class="table-wrap" style="border:0;border-radius:0">
         <table class="scorecard-table">
           <thead><tr><th>Hole</th>${round.holes.map((hole) => `<th>${hole.number}</th>`).join('')}<th>Out</th><th>In</th><th>Total</th></tr></thead>
           <tbody>
-            ${rows.map((row) => `<tr><td>${row.label}</td>${row.values.map((value) => `<td>${value}</td>`).join('')}<td>${row.out}</td><td>${row.in}</td><td><strong>${row.total}</strong></td></tr>`).join('')}
+            ${rows.map((row) => `<tr><th scope="row">${escapeHtml(row.label)}</th>${row.values.map((value) => `<td>${escapeHtml(value)}</td>`).join('')}<td>${escapeHtml(row.out)}</td><td>${escapeHtml(row.in)}</td><td><strong>${escapeHtml(row.total)}</strong></td></tr>`).join('')}
           </tbody>
         </table>
       </div>
+      <p class="note">Event codes: S = greenside sand, F = fairway sand, H = hazard/penalty area, O = out of bounds, and D = drop shot; repeated letters record repeated events. ${sourceLink(eventCodeGuide)}.</p>
+      ${round.estimatedLostStrokes != null ? `<p class="note">The scorecard’s estimated lost strokes: ${escapeHtml(number(round.estimatedLostStrokes, 1))}. This may be fractional and is not a formal penalty-stroke count or an additive what-if. ${sourceLink(lostStrokesGuide)}</p>` : ''}
     </div>
   `;
 }
@@ -604,17 +682,18 @@ function archiveTable(report) {
   return `
     <div class="table-wrap">
       <table>
-        <thead><tr><th>Date</th><th>Course / tee</th><th>Gross</th><th>Putts</th><th>GIR</th><th>FIR</th><th>Score Value</th><th>Detail</th></tr></thead>
+        <thead><tr><th>Date</th><th>Course / tee</th><th>Gross</th><th>Putts</th><th>GIR</th><th>FIR</th><th>Score Value</th><th title="TheGrint estimate, not formal penalty strokes">Lost strokes (est.)</th><th>Detail</th></tr></thead>
         <tbody>
           ${rounds.map((round) => `
             <tr>
               <td>${escapeHtml(formatDate(round.date, 'short'))}</td>
               <td><strong>${escapeHtml(round.course)}</strong><br><span class="cell-muted">${escapeHtml(round.tee)}</span></td>
-              <td>${round.score}${round.adjustedGross !== null ? `<br><span class="cell-muted">Adj. ${escapeHtml(round.adjustedGross)}</span>` : ''}</td>
+              <td>${round.score}${round.adjustedGross != null ? `<br><span class="cell-muted">Adj. ${escapeHtml(round.adjustedGross)}</span>` : ''}</td>
               <td>${round.putts}</td>
               <td>${round.gir === null ? '—' : percent(round.gir, 0)}</td>
               <td>${round.fir === null ? '—' : percent(round.fir, 0)}</td>
               <td>${round.scoreValue === null ? '—' : number(round.scoreValue, 1)}</td>
+              <td>${round.estimatedLostStrokes == null ? '—' : number(round.estimatedLostStrokes, 1)}</td>
               <td>${round.holes ? `<button class="row-action" type="button" data-round-key="${escapeHtml(roundKey(round))}">View 18</button>` : '<span class="cell-muted">Summary only</span>'}</td>
             </tr>
           `).join('')}
@@ -990,6 +1069,7 @@ function renderPriorities(report) {
   const twoPutt = report.holeStats.excessPutts;
   const tripleCount = report.holeStats.distribution.triplePlus;
   const holeCount = report.holeStats.count;
+  const recordedEventCodes = report.allHoles.filter((hole) => hole.penaltyCodes != null && hole.penaltyCodes !== '');
   const detailMessage = holeCount
     ? `${tripleCount} triple-or-worse holes and ${report.holeStats.threePlusCount} three-plus-putt holes appear across ${holeCount} recorded holes.`
     : 'There are no detailed holes in the active filter, so no hole-level scenarios can be calculated.';
@@ -1015,8 +1095,10 @@ function renderPriorities(report) {
       </article>
       <article class="experiment-card">
         <span class="experiment-card__number">02</span>
-        <h3>Label penalty type</h3>
-        <p>Record hazard, out-of-bounds, lost ball, or other. A typed count makes triple-or-worse holes more diagnosable than score alone.</p>
+        <h3>${recordedEventCodes.length ? 'Review recorded events' : 'Label penalty type'}</h3>
+        <p>${recordedEventCodes.length
+          ? `${recordedEventCodes.length} holes already have recorded event codes. Review those entries alongside the scorecard before adding more context; event labels alone do not establish a rule penalty count or cause.`
+          : 'Record scorecard event codes when available. A typed record can add context to triple-or-worse holes without treating labels as causes or formal penalty counts.'}</p>
       </article>
       <article class="experiment-card">
         <span class="experiment-card__number">03</span>
@@ -1042,22 +1124,65 @@ function allSourceLinks() {
   return rows;
 }
 
+function fieldCoverage(report) {
+  const expectedHoleCells = report.summary.count * 18;
+  const detailedHoles = report.chronological.flatMap((round) => round.holes || []);
+  const observed = (predicate) => detailedHoles.filter(predicate).length;
+  const holeRows = [
+    ['Gross score', observed((hole) => Number.isFinite(hole.strokes))],
+    ['Par', observed((hole) => Number.isFinite(hole.par))],
+    ['Putts', observed((hole) => Number.isFinite(hole.putts))],
+    ['Yards', observed((hole) => Number.isFinite(hole.yards))],
+    ['Stroke index', observed((hole) => Number.isFinite(hole.strokeIndex))],
+    ['Hole GIR', observed((hole) => typeof hole.gir === 'boolean')],
+    ['Tee direction', observed((hole) => hole.teeAccuracy != null)],
+    ['Adjusted strokes', observed((hole) => Number.isFinite(hole.adjustedStrokes))],
+    ['Event codes', observed((hole) => hole.penaltyCodes != null)],
+  ];
+  const roundRows = [
+    ['Adjusted gross total', report.chronological.filter((round) => round.adjustedGross != null).length],
+    ['Site lost-strokes estimate', report.chronological.filter((round) => round.estimatedLostStrokes != null).length],
+  ];
+  const row = (label, count, expected, kind) => `
+    <tr>
+      <th scope="row">${escapeHtml(label)}</th>
+      <td>${count} / ${expected}</td>
+      <td>${percent(count / expected * 100, 0)}</td>
+      <td>${escapeHtml(kind)}</td>
+    </tr>
+  `;
+  return `
+    <p>Per-hole coverage counts observed cells against ${expectedHoleCells} expected cells (${report.summary.count} selected rounds × 18), including summary-only rounds. Explicit <em>No</em>, zero, and blank event records count as observed.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Field</th><th>Observed</th><th>Coverage</th><th>Denominator</th></tr></thead>
+        <tbody>
+          ${holeRows.map(([label, count]) => row(label, count, expectedHoleCells, 'Hole cells')).join('')}
+          ${roundRows.map(([label, count]) => row(label, count, report.summary.count, 'Rounds')).join('')}
+        </tbody>
+      </table>
+    </div>
+  `;
+}
+
 function renderMethod(report) {
   const sources = allSourceLinks();
   setHtml(dom.method, `
     <details open>
       <summary>How the numbers are defined</summary>
       <div class="details-body">
-        <p><strong>Scoring:</strong> every performance calculation uses gross score. Adjusted gross is displayed separately when supplied. “Score Value” preserves the source label and is not presented as a handicap differential.</p>
-        <p><strong>Missing values:</strong> absent hole grids, GIR, FIR, yardage, direction, and research descriptions are excluded from their respective calculations—not converted to zero. Every chart names its relevant denominator.</p>
-        <p><strong>Rates:</strong> three-plus-putt and triple-plus rates use recorded holes. Mean GIR and FIR give equal weight to each available round-level percentage; because only rounded percentages are supplied, they are not reconstructed into pooled makes/attempts.</p>
+        <p><strong>Scoring:</strong> every performance calculation uses gross score. Adjusted gross and per-hole adjusted strokes are displayed separately when supplied. “Score Value” preserves the source label and is not presented as a handicap differential.</p>
+        <p><strong>Missing values:</strong> absent hole grids, GIR, FIR, yardage, stroke index, direction, adjusted strokes, event codes, and research descriptions are excluded from their respective calculations—not converted to zero. Every chart names its relevant denominator.</p>
+        <p><strong>Rates:</strong> three-plus-putt and triple-plus rates use recorded holes. Mean GIR and FIR give equal weight to each available round-level percentage. These remain averages of rounded round rates, not pooled hole-level rates, even when per-hole records are available.</p>
+        <p><strong>Events and estimates:</strong> scorecard event codes include sand as well as hazard, out-of-bounds, and drop records; they are not formal rule penalty-stroke counts. The site’s lost-strokes total is its estimate, may be fractional, and is not added to any score or what-if. ${sourceLink(eventCodeGuide)} · ${sourceLink(lostStrokesGuide)}</p>
         <p><strong>Comparisons:</strong> season thirds are equal-sized chronological groups. Repeat holes require the same course, tee, and hole number with at least two playings. No population percentile is shown; the samples are too small for a stable rank.</p>
       </div>
     </details>
     <details>
       <summary>Coverage, dates, and interpretation</summary>
       <div class="details-body">
-        <p>The active dataset runs from ${escapeHtml(formatDate(report.summary.startDate))} through ${escapeHtml(formatDate(report.summary.endDate))}. It contains ${report.summary.count} selected rounds, including ${report.summary.detailed} complete hole grids.</p>
+        <p>The active dataset runs from ${escapeHtml(formatDate(report.summary.startDate))} through ${escapeHtml(formatDate(report.summary.endDate))}. It contains ${report.summary.count} selected rounds, including ${report.summary.detailed} complete gross-score and putt grids. Supplementary fields have field-level coverage below.</p>
+        ${fieldCoverage(report)}
         <p>Course and tee mixes are observational. Putting totals lack first-putt distance; direction codes do not describe curvature; layout groups mix geometry with par, distance, conditions, and golfer decisions.</p>
         <p>Generated ${escapeHtml(state.payload.generatedAt ? new Date(state.payload.generatedAt).toLocaleString('en-US') : 'at an unspecified time')}.</p>
       </div>

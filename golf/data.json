@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "title": "2026 season report",
   "through": "2026-09-06",
-  "generatedAt": "2026-09-07T09:38:51.347Z",
+  "generatedAt": "2026-09-07T16:36:23.042Z",
   "rounds": [
     {
       "date": "2026-09-06",
@@ -14,6 +14,7 @@
       "fir": 43,
       "scoreValue": 33.9,
       "adjustedGross": 108,
+      "estimatedLostStrokes": 4,
       "detailSource": "Captured scorecard; gross strokes and putts reconcile to the round total.",
       "holes": [
         {
@@ -24,7 +25,9 @@
           "yards": 425,
           "strokeIndex": 13,
           "teeAccuracy": "left",
-          "gir": false
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": ""
         },
         {
           "number": 2,
@@ -34,7 +37,9 @@
           "yards": 366,
           "strokeIndex": 9,
           "teeAccuracy": "hit",
-          "gir": false
+          "gir": false,
+          "adjustedStrokes": 5,
+          "penaltyCodes": ""
         },
         {
           "number": 3,
@@ -44,7 +49,9 @@
           "yards": 160,
           "strokeIndex": 17,
           "teeAccuracy": "left",
-          "gir": false
+          "gir": false,
+          "adjustedStrokes": 5,
+          "penaltyCodes": ""
         },
         {
           "number": 4,
@@ -54,7 +61,9 @@
           "yards": 524,
           "strokeIndex": 5,
           "teeAccuracy": "right",
-          "gir": false
+          "gir": false,
+          "adjustedStrokes": 8,
+          "penaltyCodes": "D"
         },
         {
           "number": 5,
@@ -64,7 +73,9 @@
           "yards": 376,
           "strokeIndex": 7,
           "teeAccuracy": "missed",
-          "gir": false
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": ""
         },
         {
           "number": 6,
@@ -74,7 +85,9 @@
           "yards": 403,
           "strokeIndex": 3,
           "teeAccuracy": "left",
-          "gir": false
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": ""
         },
         {
           "number": 7,
@@ -84,7 +97,9 @@
           "yards": 180,
           "strokeIndex": 11,
           "teeAccuracy": "short",
-          "gir": false
+          "gir": false,
+          "adjustedStrokes": 4,
+          "penaltyCodes": ""
         },
         {
           "number": 8,
@@ -94,7 +109,9 @@
           "yards": 321,
           "strokeIndex": 15,
           "teeAccuracy": "hit",
-          "gir": true
+          "gir": true,
+          "adjustedStrokes": 5,
+          "penaltyCodes": ""
         },
         {
           "number": 9,
@@ -104,7 +121,9 @@
           "yards": 420,
           "strokeIndex": 1,
           "teeAccuracy": "hit",
-          "gir": false
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": ""
         },
         {
           "number": 10,
@@ -114,7 +133,9 @@
           "yards": 345,
           "strokeIndex": 14,
           "teeAccuracy": "hit",
-          "gir": false
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": ""
         },
         {
           "number": 11,
@@ -124,7 +145,9 @@
           "yards": 433,
           "strokeIndex": 2,
           "teeAccuracy": "hit",
-          "gir": false
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": ""
         },
         {
           "number": 12,
@@ -134,7 +157,9 @@
           "yards": 138,
           "strokeIndex": 18,
           "teeAccuracy": "right",
-          "gir": false
+          "gir": false,
+          "adjustedStrokes": 5,
+          "penaltyCodes": ""
         },
         {
           "number": 13,
@@ -144,7 +169,9 @@
           "yards": 398,
           "strokeIndex": 4,
           "teeAccuracy": "right",
-          "gir": false
+          "gir": false,
+          "adjustedStrokes": 7,
+          "penaltyCodes": "D"
         },
         {
           "number": 14,
@@ -154,7 +181,9 @@
           "yards": 473,
           "strokeIndex": 10,
           "teeAccuracy": "right",
-          "gir": false
+          "gir": false,
+          "adjustedStrokes": 7,
+          "penaltyCodes": "D"
         },
         {
           "number": 15,
@@ -164,7 +193,9 @@
           "yards": 334,
           "strokeIndex": 12,
           "teeAccuracy": "right",
-          "gir": false
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": ""
         },
         {
           "number": 16,
@@ -174,7 +205,9 @@
           "yards": 379,
           "strokeIndex": 6,
           "teeAccuracy": "left",
-          "gir": false
+          "gir": false,
+          "adjustedStrokes": 8,
+          "penaltyCodes": "D"
         },
         {
           "number": 17,
@@ -184,7 +217,9 @@
           "yards": 166,
           "strokeIndex": 16,
           "teeAccuracy": "right",
-          "gir": false
+          "gir": false,
+          "adjustedStrokes": 5,
+          "penaltyCodes": ""
         },
         {
           "number": 18,
@@ -194,7 +229,9 @@
           "yards": 501,
           "strokeIndex": 8,
           "teeAccuracy": "hit",
-          "gir": false
+          "gir": false,
+          "adjustedStrokes": 7,
+          "penaltyCodes": ""
         }
       ]
     },
@@ -207,7 +244,8 @@
       "gir": 11,
       "fir": 8,
       "scoreValue": 31.8,
-      "adjustedGross": null,
+      "adjustedGross": 103,
+      "estimatedLostStrokes": 7,
       "detailSource": "Captured scorecard; gross strokes and putts reconcile to the round total.",
       "holes": [
         {
@@ -215,180 +253,216 @@
           "par": 4,
           "strokes": 6,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 398,
+          "strokeIndex": 7,
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": "D"
         },
         {
           "number": 2,
           "par": 4,
           "strokes": 6,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 318,
+          "strokeIndex": 15,
+          "teeAccuracy": "left",
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": ""
         },
         {
           "number": 3,
           "par": 3,
           "strokes": 2,
           "putts": 1,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 165,
+          "strokeIndex": 17,
+          "teeAccuracy": "hit",
+          "gir": true,
+          "adjustedStrokes": 2,
+          "penaltyCodes": ""
         },
         {
           "number": 4,
           "par": 5,
           "strokes": 9,
           "putts": 4,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 501,
+          "strokeIndex": 1,
+          "teeAccuracy": "left",
+          "gir": false,
+          "adjustedStrokes": 9,
+          "penaltyCodes": ""
         },
         {
           "number": 5,
           "par": 4,
           "strokes": 5,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 398,
+          "strokeIndex": 3,
+          "teeAccuracy": "left",
+          "gir": false,
+          "adjustedStrokes": 5,
+          "penaltyCodes": ""
         },
         {
           "number": 6,
           "par": 4,
           "strokes": 5,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 348,
+          "strokeIndex": 11,
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 5,
+          "penaltyCodes": ""
         },
         {
           "number": 7,
           "par": 4,
           "strokes": 6,
           "putts": 1,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 360,
+          "strokeIndex": 5,
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": "D"
         },
         {
           "number": 8,
           "par": 3,
           "strokes": 6,
           "putts": 3,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 172,
+          "strokeIndex": 13,
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": "D"
         },
         {
           "number": 9,
           "par": 4,
           "strokes": 7,
           "putts": 3,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 363,
+          "strokeIndex": 9,
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 7,
+          "penaltyCodes": "D"
         },
         {
           "number": 10,
           "par": 4,
           "strokes": 6,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 312,
+          "strokeIndex": 10,
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": "D"
         },
         {
           "number": 11,
           "par": 4,
           "strokes": 4,
           "putts": 1,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 347,
+          "strokeIndex": 6,
+          "teeAccuracy": "hit",
+          "gir": false,
+          "adjustedStrokes": 4,
+          "penaltyCodes": ""
         },
         {
           "number": 12,
           "par": 3,
           "strokes": 5,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 152,
+          "strokeIndex": 12,
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 5,
+          "penaltyCodes": ""
         },
         {
           "number": 13,
           "par": 4,
           "strokes": 7,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 322,
+          "strokeIndex": 16,
+          "teeAccuracy": "left",
+          "gir": false,
+          "adjustedStrokes": 7,
+          "penaltyCodes": "FD"
         },
         {
           "number": 14,
           "par": 3,
           "strokes": 4,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 175,
+          "strokeIndex": 14,
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 4,
+          "penaltyCodes": ""
         },
         {
           "number": 15,
           "par": 5,
           "strokes": 7,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 492,
+          "strokeIndex": 2,
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 7,
+          "penaltyCodes": ""
         },
         {
           "number": 16,
           "par": 3,
           "strokes": 5,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 150,
+          "strokeIndex": 18,
+          "teeAccuracy": "left",
+          "gir": false,
+          "adjustedStrokes": 5,
+          "penaltyCodes": "S"
         },
         {
           "number": 17,
           "par": 5,
           "strokes": 5,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 423,
+          "strokeIndex": 8,
+          "teeAccuracy": "missed",
+          "gir": true,
+          "adjustedStrokes": 5,
+          "penaltyCodes": ""
         },
         {
           "number": 18,
           "par": 5,
           "strokes": 9,
           "putts": 3,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 489,
+          "strokeIndex": 4,
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 8,
+          "penaltyCodes": "D"
         }
       ]
     },
@@ -401,7 +475,8 @@
       "gir": 22,
       "fir": 31,
       "scoreValue": 24.1,
-      "adjustedGross": null,
+      "adjustedGross": 96,
+      "estimatedLostStrokes": 5.5,
       "detailSource": "Captured scorecard; gross strokes and putts reconcile to the round total.",
       "holes": [
         {
@@ -409,180 +484,216 @@
           "par": 4,
           "strokes": 5,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 398,
+          "strokeIndex": 7,
+          "teeAccuracy": "left",
+          "gir": false,
+          "adjustedStrokes": 5,
+          "penaltyCodes": "D"
         },
         {
           "number": 2,
           "par": 4,
           "strokes": 4,
           "putts": 1,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 318,
+          "strokeIndex": 15,
+          "teeAccuracy": "left",
+          "gir": false,
+          "adjustedStrokes": 4,
+          "penaltyCodes": ""
         },
         {
           "number": 3,
           "par": 3,
           "strokes": 3,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 165,
+          "strokeIndex": 17,
+          "teeAccuracy": "hit",
+          "gir": true,
+          "adjustedStrokes": 3,
+          "penaltyCodes": ""
         },
         {
           "number": 4,
           "par": 5,
           "strokes": 5,
           "putts": 1,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 501,
+          "strokeIndex": 1,
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 5,
+          "penaltyCodes": ""
         },
         {
           "number": 5,
           "par": 4,
           "strokes": 8,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 398,
+          "strokeIndex": 3,
+          "teeAccuracy": "left",
+          "gir": false,
+          "adjustedStrokes": 8,
+          "penaltyCodes": "DD"
         },
         {
           "number": 6,
           "par": 4,
           "strokes": 4,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 348,
+          "strokeIndex": 11,
+          "teeAccuracy": "left",
+          "gir": true,
+          "adjustedStrokes": 4,
+          "penaltyCodes": ""
         },
         {
           "number": 7,
           "par": 4,
           "strokes": 6,
           "putts": 1,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 360,
+          "strokeIndex": 5,
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": ""
         },
         {
           "number": 8,
           "par": 3,
           "strokes": 5,
           "putts": 3,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 172,
+          "strokeIndex": 13,
+          "teeAccuracy": "short",
+          "gir": false,
+          "adjustedStrokes": 5,
+          "penaltyCodes": ""
         },
         {
           "number": 9,
           "par": 4,
           "strokes": 7,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 363,
+          "strokeIndex": 9,
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 7,
+          "penaltyCodes": "F"
         },
         {
           "number": 10,
           "par": 4,
           "strokes": 8,
           "putts": 3,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 312,
+          "strokeIndex": 10,
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 8,
+          "penaltyCodes": "D"
         },
         {
           "number": 11,
           "par": 4,
           "strokes": 5,
           "putts": 3,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 347,
+          "strokeIndex": 6,
+          "teeAccuracy": "hit",
+          "gir": true,
+          "adjustedStrokes": 5,
+          "penaltyCodes": ""
         },
         {
           "number": 12,
           "par": 3,
           "strokes": 4,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 152,
+          "strokeIndex": 12,
+          "teeAccuracy": "short",
+          "gir": false,
+          "adjustedStrokes": 4,
+          "penaltyCodes": ""
         },
         {
           "number": 13,
           "par": 4,
           "strokes": 5,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 322,
+          "strokeIndex": 16,
+          "teeAccuracy": "left",
+          "gir": false,
+          "adjustedStrokes": 5,
+          "penaltyCodes": ""
         },
         {
           "number": 14,
           "par": 3,
           "strokes": 5,
           "putts": 3,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 175,
+          "strokeIndex": 14,
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 5,
+          "penaltyCodes": ""
         },
         {
           "number": 15,
           "par": 5,
           "strokes": 6,
           "putts": 1,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 492,
+          "strokeIndex": 2,
+          "teeAccuracy": "hit",
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": ""
         },
         {
           "number": 16,
           "par": 3,
           "strokes": 4,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 150,
+          "strokeIndex": 18,
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 4,
+          "penaltyCodes": ""
         },
         {
           "number": 17,
           "par": 5,
           "strokes": 5,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 423,
+          "strokeIndex": 8,
+          "teeAccuracy": "hit",
+          "gir": true,
+          "adjustedStrokes": 5,
+          "penaltyCodes": ""
         },
         {
           "number": 18,
           "par": 5,
           "strokes": 7,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 489,
+          "strokeIndex": 4,
+          "teeAccuracy": "hit",
+          "gir": false,
+          "adjustedStrokes": 7,
+          "penaltyCodes": "D"
         }
       ]
     },
@@ -595,7 +706,8 @@
       "gir": 22,
       "fir": 29,
       "scoreValue": 31.5,
-      "adjustedGross": null,
+      "adjustedGross": 101,
+      "estimatedLostStrokes": 2.5,
       "detailSource": "Captured scorecard; gross strokes and putts reconcile to the round total.",
       "holes": [
         {
@@ -603,180 +715,216 @@
           "par": 4,
           "strokes": 8,
           "putts": 3,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 316,
+          "strokeIndex": 15,
+          "teeAccuracy": "left",
+          "gir": false,
+          "adjustedStrokes": 8,
+          "penaltyCodes": "D"
         },
         {
           "number": 2,
           "par": 3,
           "strokes": 4,
           "putts": 3,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 179,
+          "strokeIndex": 11,
+          "teeAccuracy": "hit",
+          "gir": true,
+          "adjustedStrokes": 4,
+          "penaltyCodes": ""
         },
         {
           "number": 3,
           "par": 5,
           "strokes": 5,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 458,
+          "strokeIndex": 7,
+          "teeAccuracy": "hit",
+          "gir": true,
+          "adjustedStrokes": 5,
+          "penaltyCodes": ""
         },
         {
           "number": 4,
           "par": 4,
           "strokes": 6,
           "putts": 3,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 426,
+          "strokeIndex": 3,
+          "teeAccuracy": "left",
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": ""
         },
         {
           "number": 5,
           "par": 4,
           "strokes": 6,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 370,
+          "strokeIndex": 5,
+          "teeAccuracy": "left",
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": "S"
         },
         {
           "number": 6,
           "par": 4,
           "strokes": 7,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 352,
+          "strokeIndex": 9,
+          "teeAccuracy": "left",
+          "gir": false,
+          "adjustedStrokes": 7,
+          "penaltyCodes": ""
         },
         {
           "number": 7,
           "par": 4,
           "strokes": 6,
           "putts": 1,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 428,
+          "strokeIndex": 1,
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": ""
         },
         {
           "number": 8,
           "par": 3,
           "strokes": 4,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 135,
+          "strokeIndex": 17,
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 4,
+          "penaltyCodes": ""
         },
         {
           "number": 9,
           "par": 4,
           "strokes": 8,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 324,
+          "strokeIndex": 13,
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 8,
+          "penaltyCodes": ""
         },
         {
           "number": 10,
           "par": 4,
           "strokes": 6,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 361,
+          "strokeIndex": 12,
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": ""
         },
         {
           "number": 11,
           "par": 5,
           "strokes": 5,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 518,
+          "strokeIndex": 2,
+          "teeAccuracy": "left",
+          "gir": true,
+          "adjustedStrokes": 5,
+          "penaltyCodes": ""
         },
         {
           "number": 12,
           "par": 3,
           "strokes": 4,
           "putts": 1,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 177,
+          "strokeIndex": 8,
+          "teeAccuracy": "left",
+          "gir": false,
+          "adjustedStrokes": 4,
+          "penaltyCodes": ""
         },
         {
           "number": 13,
           "par": 4,
           "strokes": 6,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 318,
+          "strokeIndex": 16,
+          "teeAccuracy": "hit",
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": "D"
         },
         {
           "number": 14,
           "par": 3,
           "strokes": 3,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 158,
+          "strokeIndex": 18,
+          "teeAccuracy": "hit",
+          "gir": true,
+          "adjustedStrokes": 3,
+          "penaltyCodes": ""
         },
         {
           "number": 15,
           "par": 4,
           "strokes": 5,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 360,
+          "strokeIndex": 6,
+          "teeAccuracy": "hit",
+          "gir": false,
+          "adjustedStrokes": 5,
+          "penaltyCodes": ""
         },
         {
           "number": 16,
           "par": 5,
           "strokes": 7,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 495,
+          "strokeIndex": 4,
+          "teeAccuracy": "left",
+          "gir": false,
+          "adjustedStrokes": 7,
+          "penaltyCodes": ""
         },
         {
           "number": 17,
           "par": 4,
           "strokes": 6,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 349,
+          "strokeIndex": 10,
+          "teeAccuracy": "left",
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": ""
         },
         {
           "number": 18,
           "par": 4,
           "strokes": 5,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 334,
+          "strokeIndex": 14,
+          "teeAccuracy": "hit",
+          "gir": false,
+          "adjustedStrokes": 5,
+          "penaltyCodes": ""
         }
       ]
     },
@@ -789,7 +937,8 @@
       "gir": 11,
       "fir": 15,
       "scoreValue": 30,
-      "adjustedGross": null,
+      "adjustedGross": 102,
+      "estimatedLostStrokes": 5,
       "detailSource": "Captured scorecard; gross strokes and putts reconcile to the round total.",
       "holes": [
         {
@@ -797,180 +946,216 @@
           "par": 4,
           "strokes": 8,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 398,
+          "strokeIndex": 7,
+          "teeAccuracy": "left",
+          "gir": false,
+          "adjustedStrokes": 8,
+          "penaltyCodes": "D"
         },
         {
           "number": 2,
           "par": 4,
           "strokes": 6,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 318,
+          "strokeIndex": 15,
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": ""
         },
         {
           "number": 3,
           "par": 3,
           "strokes": 5,
           "putts": 3,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 165,
+          "strokeIndex": 17,
+          "teeAccuracy": "left",
+          "gir": false,
+          "adjustedStrokes": 5,
+          "penaltyCodes": ""
         },
         {
           "number": 4,
           "par": 5,
           "strokes": 5,
           "putts": 1,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 501,
+          "strokeIndex": 1,
+          "teeAccuracy": "left",
+          "gir": false,
+          "adjustedStrokes": 5,
+          "penaltyCodes": ""
         },
         {
           "number": 5,
           "par": 4,
           "strokes": 7,
           "putts": 1,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 398,
+          "strokeIndex": 3,
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 7,
+          "penaltyCodes": ""
         },
         {
           "number": 6,
           "par": 4,
           "strokes": 4,
           "putts": 1,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 348,
+          "strokeIndex": 11,
+          "teeAccuracy": "hit",
+          "gir": false,
+          "adjustedStrokes": 4,
+          "penaltyCodes": ""
         },
         {
           "number": 7,
           "par": 4,
           "strokes": 5,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 360,
+          "strokeIndex": 5,
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 5,
+          "penaltyCodes": ""
         },
         {
           "number": 8,
           "par": 3,
           "strokes": 4,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 172,
+          "strokeIndex": 13,
+          "teeAccuracy": "left",
+          "gir": false,
+          "adjustedStrokes": 4,
+          "penaltyCodes": ""
         },
         {
           "number": 9,
           "par": 4,
           "strokes": 5,
           "putts": 3,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 363,
+          "strokeIndex": 9,
+          "teeAccuracy": "right",
+          "gir": true,
+          "adjustedStrokes": 5,
+          "penaltyCodes": ""
         },
         {
           "number": 10,
           "par": 4,
           "strokes": 7,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 312,
+          "strokeIndex": 10,
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 7,
+          "penaltyCodes": "DD"
         },
         {
           "number": 11,
           "par": 4,
           "strokes": 6,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 347,
+          "strokeIndex": 6,
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": ""
         },
         {
           "number": 12,
           "par": 3,
           "strokes": 5,
           "putts": 3,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 152,
+          "strokeIndex": 12,
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 5,
+          "penaltyCodes": ""
         },
         {
           "number": 13,
           "par": 4,
           "strokes": 6,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 322,
+          "strokeIndex": 16,
+          "teeAccuracy": "left",
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": ""
         },
         {
           "number": 14,
           "par": 3,
           "strokes": 5,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 175,
+          "strokeIndex": 14,
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 5,
+          "penaltyCodes": ""
         },
         {
           "number": 15,
           "par": 5,
           "strokes": 7,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 492,
+          "strokeIndex": 2,
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 7,
+          "penaltyCodes": "D"
         },
         {
           "number": 16,
           "par": 3,
           "strokes": 3,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 150,
+          "strokeIndex": 18,
+          "teeAccuracy": "hit",
+          "gir": true,
+          "adjustedStrokes": 3,
+          "penaltyCodes": ""
         },
         {
           "number": 17,
           "par": 5,
           "strokes": 6,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 423,
+          "strokeIndex": 8,
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": "D"
         },
         {
           "number": 18,
           "par": 5,
           "strokes": 8,
           "putts": 3,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 489,
+          "strokeIndex": 4,
+          "teeAccuracy": "hit",
+          "gir": false,
+          "adjustedStrokes": 8,
+          "penaltyCodes": ""
         }
       ]
     },
@@ -983,7 +1168,8 @@
       "gir": 11,
       "fir": 50,
       "scoreValue": 23.9,
-      "adjustedGross": null,
+      "adjustedGross": 97,
+      "estimatedLostStrokes": 7,
       "detailSource": "Captured scorecard; gross strokes and putts reconcile to the round total.",
       "holes": [
         {
@@ -991,180 +1177,216 @@
           "par": 4,
           "strokes": 7,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 425,
+          "strokeIndex": 13,
+          "teeAccuracy": "left",
+          "gir": false,
+          "adjustedStrokes": 7,
+          "penaltyCodes": ""
         },
         {
           "number": 2,
           "par": 4,
           "strokes": 6,
           "putts": 1,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 366,
+          "strokeIndex": 9,
+          "teeAccuracy": "left",
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": "D"
         },
         {
           "number": 3,
           "par": 3,
           "strokes": 2,
           "putts": 1,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 160,
+          "strokeIndex": 17,
+          "teeAccuracy": "hit",
+          "gir": true,
+          "adjustedStrokes": 2,
+          "penaltyCodes": ""
         },
         {
           "number": 4,
           "par": 5,
           "strokes": 8,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 524,
+          "strokeIndex": 5,
+          "teeAccuracy": "left",
+          "gir": false,
+          "adjustedStrokes": 8,
+          "penaltyCodes": "DD"
         },
         {
           "number": 5,
           "par": 4,
           "strokes": 5,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 376,
+          "strokeIndex": 7,
+          "teeAccuracy": "hit",
+          "gir": false,
+          "adjustedStrokes": 5,
+          "penaltyCodes": ""
         },
         {
           "number": 6,
           "par": 4,
           "strokes": 7,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 403,
+          "strokeIndex": 3,
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 7,
+          "penaltyCodes": "D"
         },
         {
           "number": 7,
           "par": 3,
           "strokes": 4,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 180,
+          "strokeIndex": 11,
+          "teeAccuracy": "short",
+          "gir": false,
+          "adjustedStrokes": 4,
+          "penaltyCodes": ""
         },
         {
           "number": 8,
           "par": 4,
           "strokes": 5,
           "putts": 1,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 321,
+          "strokeIndex": 15,
+          "teeAccuracy": "hit",
+          "gir": false,
+          "adjustedStrokes": 5,
+          "penaltyCodes": ""
         },
         {
           "number": 9,
           "par": 4,
           "strokes": 5,
           "putts": 1,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 420,
+          "strokeIndex": 1,
+          "teeAccuracy": "left",
+          "gir": false,
+          "adjustedStrokes": 5,
+          "penaltyCodes": ""
         },
         {
           "number": 10,
           "par": 4,
           "strokes": 4,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 345,
+          "strokeIndex": 14,
+          "teeAccuracy": "left",
+          "gir": true,
+          "adjustedStrokes": 4,
+          "penaltyCodes": ""
         },
         {
           "number": 11,
           "par": 4,
           "strokes": 6,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 433,
+          "strokeIndex": 2,
+          "teeAccuracy": "hit",
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": ""
         },
         {
           "number": 12,
           "par": 3,
           "strokes": 4,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 138,
+          "strokeIndex": 18,
+          "teeAccuracy": "short",
+          "gir": false,
+          "adjustedStrokes": 4,
+          "penaltyCodes": ""
         },
         {
           "number": 13,
           "par": 4,
           "strokes": 6,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 398,
+          "strokeIndex": 4,
+          "teeAccuracy": "hit",
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": "D"
         },
         {
           "number": 14,
           "par": 5,
           "strokes": 8,
           "putts": 3,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 473,
+          "strokeIndex": 10,
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 8,
+          "penaltyCodes": "D"
         },
         {
           "number": 15,
           "par": 4,
           "strokes": 4,
           "putts": 1,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 334,
+          "strokeIndex": 12,
+          "teeAccuracy": "hit",
+          "gir": false,
+          "adjustedStrokes": 4,
+          "penaltyCodes": "S"
         },
         {
           "number": 16,
           "par": 4,
           "strokes": 5,
           "putts": 1,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 379,
+          "strokeIndex": 6,
+          "teeAccuracy": "hit",
+          "gir": false,
+          "adjustedStrokes": 5,
+          "penaltyCodes": ""
         },
         {
           "number": 17,
           "par": 3,
           "strokes": 5,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 166,
+          "strokeIndex": 16,
+          "teeAccuracy": "left",
+          "gir": false,
+          "adjustedStrokes": 5,
+          "penaltyCodes": "F"
         },
         {
           "number": 18,
           "par": 5,
           "strokes": 6,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 501,
+          "strokeIndex": 8,
+          "teeAccuracy": "hit",
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": ""
         }
       ]
     },
@@ -1177,7 +1399,8 @@
       "gir": 11,
       "fir": 50,
       "scoreValue": 32.1,
-      "adjustedGross": null,
+      "adjustedGross": 105,
+      "estimatedLostStrokes": 2,
       "detailSource": "Captured scorecard; gross strokes and putts reconcile to the round total.",
       "holes": [
         {
@@ -1185,180 +1408,216 @@
           "par": 5,
           "strokes": 7,
           "putts": 1,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 439,
+          "strokeIndex": 9,
+          "teeAccuracy": "left",
+          "gir": false,
+          "adjustedStrokes": 7,
+          "penaltyCodes": "D"
         },
         {
           "number": 2,
           "par": 4,
           "strokes": 6,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 375,
+          "strokeIndex": 7,
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": ""
         },
         {
           "number": 3,
           "par": 5,
           "strokes": 9,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 496,
+          "strokeIndex": 3,
+          "teeAccuracy": "left",
+          "gir": false,
+          "adjustedStrokes": 9,
+          "penaltyCodes": ""
         },
         {
           "number": 4,
           "par": 3,
           "strokes": 4,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 158,
+          "strokeIndex": 17,
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 4,
+          "penaltyCodes": ""
         },
         {
           "number": 5,
           "par": 4,
           "strokes": 6,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 380,
+          "strokeIndex": 5,
+          "teeAccuracy": "hit",
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": ""
         },
         {
           "number": 6,
           "par": 3,
           "strokes": 5,
           "putts": 3,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 169,
+          "strokeIndex": 15,
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 5,
+          "penaltyCodes": ""
         },
         {
           "number": 7,
           "par": 4,
           "strokes": 7,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 362,
+          "strokeIndex": 11,
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 7,
+          "penaltyCodes": "D"
         },
         {
           "number": 8,
           "par": 4,
           "strokes": 6,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 384,
+          "strokeIndex": 1,
+          "teeAccuracy": "hit",
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": ""
         },
         {
           "number": 9,
           "par": 4,
           "strokes": 4,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 350,
+          "strokeIndex": 13,
+          "teeAccuracy": "hit",
+          "gir": true,
+          "adjustedStrokes": 4,
+          "penaltyCodes": ""
         },
         {
           "number": 10,
           "par": 4,
           "strokes": 7,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 397,
+          "strokeIndex": 6,
+          "teeAccuracy": "short",
+          "gir": false,
+          "adjustedStrokes": 7,
+          "penaltyCodes": ""
         },
         {
           "number": 11,
           "par": 4,
           "strokes": 4,
           "putts": 1,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 391,
+          "strokeIndex": 8,
+          "teeAccuracy": "hit",
+          "gir": false,
+          "adjustedStrokes": 4,
+          "penaltyCodes": ""
         },
         {
           "number": 12,
           "par": 4,
           "strokes": 6,
           "putts": 3,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 321,
+          "strokeIndex": 14,
+          "teeAccuracy": "hit",
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": ""
         },
         {
           "number": 13,
           "par": 3,
           "strokes": 3,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 181,
+          "strokeIndex": 18,
+          "teeAccuracy": "hit",
+          "gir": true,
+          "adjustedStrokes": 3,
+          "penaltyCodes": ""
         },
         {
           "number": 14,
           "par": 4,
           "strokes": 8,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 423,
+          "strokeIndex": 2,
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 8,
+          "penaltyCodes": ""
         },
         {
           "number": 15,
           "par": 3,
           "strokes": 4,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 176,
+          "strokeIndex": 16,
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 4,
+          "penaltyCodes": ""
         },
         {
           "number": 16,
           "par": 5,
           "strokes": 7,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 537,
+          "strokeIndex": 4,
+          "teeAccuracy": "hit",
+          "gir": false,
+          "adjustedStrokes": 7,
+          "penaltyCodes": ""
         },
         {
           "number": 17,
           "par": 4,
           "strokes": 6,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 319,
+          "strokeIndex": 12,
+          "teeAccuracy": "hit",
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": ""
         },
         {
           "number": 18,
           "par": 4,
           "strokes": 6,
           "putts": 2,
-          "yards": null,
-          "strokeIndex": null,
-          "teeAccuracy": null,
-          "gir": null
+          "yards": 340,
+          "strokeIndex": 10,
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": ""
         }
       ]
     },
@@ -1372,6 +1631,7 @@
       "fir": 29,
       "scoreValue": 35.1,
       "adjustedGross": 106,
+      "estimatedLostStrokes": 6,
       "detailSource": "Captured scorecard; gross strokes and putts reconcile to the round total.",
       "holes": [
         {
@@ -1381,8 +1641,10 @@
           "putts": 3,
           "yards": 339,
           "strokeIndex": 12,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "left",
+          "gir": false,
+          "adjustedStrokes": 7,
+          "penaltyCodes": ""
         },
         {
           "number": 2,
@@ -1391,8 +1653,10 @@
           "putts": 2,
           "yards": 455,
           "strokeIndex": 16,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "hit",
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": ""
         },
         {
           "number": 3,
@@ -1401,8 +1665,10 @@
           "putts": 2,
           "yards": 169,
           "strokeIndex": 18,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "hit",
+          "gir": true,
+          "adjustedStrokes": 3,
+          "penaltyCodes": ""
         },
         {
           "number": 4,
@@ -1411,8 +1677,10 @@
           "putts": 2,
           "yards": 459,
           "strokeIndex": 2,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "short",
+          "gir": false,
+          "adjustedStrokes": 8,
+          "penaltyCodes": "SF"
         },
         {
           "number": 5,
@@ -1421,8 +1689,10 @@
           "putts": 2,
           "yards": 343,
           "strokeIndex": 10,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "hit",
+          "gir": true,
+          "adjustedStrokes": 4,
+          "penaltyCodes": ""
         },
         {
           "number": 6,
@@ -1431,8 +1701,10 @@
           "putts": 2,
           "yards": 330,
           "strokeIndex": 8,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "hit",
+          "gir": true,
+          "adjustedStrokes": 4,
+          "penaltyCodes": ""
         },
         {
           "number": 7,
@@ -1441,8 +1713,10 @@
           "putts": 2,
           "yards": 193,
           "strokeIndex": 4,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "short",
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": "D"
         },
         {
           "number": 8,
@@ -1451,8 +1725,10 @@
           "putts": 2,
           "yards": 310,
           "strokeIndex": 14,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "left",
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": "D"
         },
         {
           "number": 9,
@@ -1461,8 +1737,10 @@
           "putts": 2,
           "yards": 353,
           "strokeIndex": 6,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "left",
+          "gir": false,
+          "adjustedStrokes": 7,
+          "penaltyCodes": "D"
         },
         {
           "number": 10,
@@ -1471,8 +1749,10 @@
           "putts": 2,
           "yards": 423,
           "strokeIndex": 1,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 7,
+          "penaltyCodes": ""
         },
         {
           "number": 11,
@@ -1481,8 +1761,10 @@
           "putts": 1,
           "yards": 396,
           "strokeIndex": 7,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 5,
+          "penaltyCodes": ""
         },
         {
           "number": 12,
@@ -1491,8 +1773,10 @@
           "putts": 3,
           "yards": 475,
           "strokeIndex": 11,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 8,
+          "penaltyCodes": "D"
         },
         {
           "number": 13,
@@ -1501,8 +1785,10 @@
           "putts": 2,
           "yards": 180,
           "strokeIndex": 15,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "short",
+          "gir": false,
+          "adjustedStrokes": 5,
+          "penaltyCodes": ""
         },
         {
           "number": 14,
@@ -1511,8 +1797,10 @@
           "putts": 3,
           "yards": 402,
           "strokeIndex": 3,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 8,
+          "penaltyCodes": ""
         },
         {
           "number": 15,
@@ -1521,8 +1809,10 @@
           "putts": 1,
           "yards": 369,
           "strokeIndex": 13,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "short",
+          "gir": false,
+          "adjustedStrokes": 4,
+          "penaltyCodes": ""
         },
         {
           "number": 16,
@@ -1531,8 +1821,10 @@
           "putts": 2,
           "yards": 160,
           "strokeIndex": 17,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "long",
+          "gir": false,
+          "adjustedStrokes": 4,
+          "penaltyCodes": ""
         },
         {
           "number": 17,
@@ -1541,8 +1833,10 @@
           "putts": 2,
           "yards": 431,
           "strokeIndex": 5,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "left",
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": ""
         },
         {
           "number": 18,
@@ -1551,8 +1845,10 @@
           "putts": 3,
           "yards": 500,
           "strokeIndex": 9,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "hit",
+          "gir": false,
+          "adjustedStrokes": 8,
+          "penaltyCodes": "D"
         }
       ]
     },
@@ -1566,6 +1862,7 @@
       "fir": 36,
       "scoreValue": 13.5,
       "adjustedGross": 86,
+      "estimatedLostStrokes": 2,
       "detailSource": "Captured scorecard; gross strokes and putts reconcile to the round total.",
       "holes": [
         {
@@ -1575,8 +1872,10 @@
           "putts": 2,
           "yards": 375,
           "strokeIndex": 11,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "left",
+          "gir": true,
+          "adjustedStrokes": 4,
+          "penaltyCodes": ""
         },
         {
           "number": 2,
@@ -1585,8 +1884,10 @@
           "putts": 1,
           "yards": 369,
           "strokeIndex": 7,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "hit",
+          "gir": false,
+          "adjustedStrokes": 4,
+          "penaltyCodes": ""
         },
         {
           "number": 3,
@@ -1595,8 +1896,10 @@
           "putts": 2,
           "yards": 501,
           "strokeIndex": 9,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "hit",
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": ""
         },
         {
           "number": 4,
@@ -1605,8 +1908,10 @@
           "putts": 1,
           "yards": 429,
           "strokeIndex": 3,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "left",
+          "gir": false,
+          "adjustedStrokes": 4,
+          "penaltyCodes": "F"
         },
         {
           "number": 5,
@@ -1615,8 +1920,10 @@
           "putts": 2,
           "yards": 474,
           "strokeIndex": 17,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 9,
+          "penaltyCodes": "FD"
         },
         {
           "number": 6,
@@ -1625,8 +1932,10 @@
           "putts": 2,
           "yards": 149,
           "strokeIndex": 13,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "hit",
+          "gir": true,
+          "adjustedStrokes": 3,
+          "penaltyCodes": ""
         },
         {
           "number": 7,
@@ -1635,8 +1944,10 @@
           "putts": 2,
           "yards": 367,
           "strokeIndex": 1,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 5,
+          "penaltyCodes": ""
         },
         {
           "number": 8,
@@ -1645,8 +1956,10 @@
           "putts": 1,
           "yards": 184,
           "strokeIndex": 15,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "short",
+          "gir": false,
+          "adjustedStrokes": 4,
+          "penaltyCodes": ""
         },
         {
           "number": 9,
@@ -1655,8 +1968,10 @@
           "putts": 2,
           "yards": 344,
           "strokeIndex": 5,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "right",
+          "gir": true,
+          "adjustedStrokes": 4,
+          "penaltyCodes": ""
         },
         {
           "number": 10,
@@ -1665,8 +1980,10 @@
           "putts": 3,
           "yards": 379,
           "strokeIndex": 14,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "short",
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": ""
         },
         {
           "number": 11,
@@ -1675,8 +1992,10 @@
           "putts": 1,
           "yards": 137,
           "strokeIndex": 18,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "short",
+          "gir": false,
+          "adjustedStrokes": 3,
+          "penaltyCodes": ""
         },
         {
           "number": 12,
@@ -1685,8 +2004,10 @@
           "putts": 3,
           "yards": 410,
           "strokeIndex": 4,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "hit",
+          "gir": true,
+          "adjustedStrokes": 5,
+          "penaltyCodes": ""
         },
         {
           "number": 13,
@@ -1695,8 +2016,10 @@
           "putts": 2,
           "yards": 501,
           "strokeIndex": 12,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "hit",
+          "gir": true,
+          "adjustedStrokes": 5,
+          "penaltyCodes": ""
         },
         {
           "number": 14,
@@ -1705,8 +2028,10 @@
           "putts": 1,
           "yards": 401,
           "strokeIndex": 10,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "hit",
+          "gir": false,
+          "adjustedStrokes": 4,
+          "penaltyCodes": ""
         },
         {
           "number": 15,
@@ -1715,8 +2040,10 @@
           "putts": 2,
           "yards": 144,
           "strokeIndex": 16,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "short",
+          "gir": false,
+          "adjustedStrokes": 4,
+          "penaltyCodes": ""
         },
         {
           "number": 16,
@@ -1725,8 +2052,10 @@
           "putts": 2,
           "yards": 421,
           "strokeIndex": 2,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "left",
+          "gir": false,
+          "adjustedStrokes": 5,
+          "penaltyCodes": ""
         },
         {
           "number": 17,
@@ -1735,8 +2064,10 @@
           "putts": 2,
           "yards": 403,
           "strokeIndex": 6,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "short",
+          "gir": false,
+          "adjustedStrokes": 5,
+          "penaltyCodes": ""
         },
         {
           "number": 18,
@@ -1745,8 +2076,10 @@
           "putts": 1,
           "yards": 495,
           "strokeIndex": 8,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": ""
         }
       ]
     },
@@ -1760,6 +2093,7 @@
       "fir": 21,
       "scoreValue": 26.2,
       "adjustedGross": 96,
+      "estimatedLostStrokes": 4.5,
       "detailSource": "Captured scorecard; gross strokes and putts reconcile to the round total.",
       "holes": [
         {
@@ -1769,8 +2103,10 @@
           "putts": 2,
           "yards": 367,
           "strokeIndex": 5,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "hit",
+          "gir": false,
+          "adjustedStrokes": 7,
+          "penaltyCodes": "S"
         },
         {
           "number": 2,
@@ -1779,8 +2115,10 @@
           "putts": 3,
           "yards": 451,
           "strokeIndex": 17,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "left",
+          "gir": false,
+          "adjustedStrokes": 9,
+          "penaltyCodes": "DD"
         },
         {
           "number": 3,
@@ -1789,8 +2127,10 @@
           "putts": 2,
           "yards": 399,
           "strokeIndex": 3,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "hit",
+          "gir": false,
+          "adjustedStrokes": 5,
+          "penaltyCodes": ""
         },
         {
           "number": 4,
@@ -1799,8 +2139,10 @@
           "putts": 2,
           "yards": 176,
           "strokeIndex": 11,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 4,
+          "penaltyCodes": ""
         },
         {
           "number": 5,
@@ -1809,8 +2151,10 @@
           "putts": 1,
           "yards": 400,
           "strokeIndex": 7,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 5,
+          "penaltyCodes": ""
         },
         {
           "number": 6,
@@ -1819,8 +2163,10 @@
           "putts": 2,
           "yards": 475,
           "strokeIndex": 9,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": ""
         },
         {
           "number": 7,
@@ -1829,8 +2175,10 @@
           "putts": 1,
           "yards": 329,
           "strokeIndex": 15,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "short",
+          "gir": false,
+          "adjustedStrokes": 4,
+          "penaltyCodes": ""
         },
         {
           "number": 8,
@@ -1839,8 +2187,10 @@
           "putts": 2,
           "yards": 148,
           "strokeIndex": 13,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "hit",
+          "gir": true,
+          "adjustedStrokes": 3,
+          "penaltyCodes": ""
         },
         {
           "number": 9,
@@ -1849,8 +2199,10 @@
           "putts": 2,
           "yards": 380,
           "strokeIndex": 1,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": "D"
         },
         {
           "number": 10,
@@ -1859,8 +2211,10 @@
           "putts": 2,
           "yards": 341,
           "strokeIndex": 8,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 5,
+          "penaltyCodes": ""
         },
         {
           "number": 11,
@@ -1869,8 +2223,10 @@
           "putts": 1,
           "yards": 358,
           "strokeIndex": 12,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 5,
+          "penaltyCodes": ""
         },
         {
           "number": 12,
@@ -1879,8 +2235,10 @@
           "putts": 2,
           "yards": 400,
           "strokeIndex": 2,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 5,
+          "penaltyCodes": ""
         },
         {
           "number": 13,
@@ -1889,8 +2247,10 @@
           "putts": 3,
           "yards": 160,
           "strokeIndex": 10,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "left",
+          "gir": false,
+          "adjustedStrokes": 5,
+          "penaltyCodes": ""
         },
         {
           "number": 14,
@@ -1899,8 +2259,10 @@
           "putts": 2,
           "yards": 518,
           "strokeIndex": 16,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 7,
+          "penaltyCodes": "F"
         },
         {
           "number": 15,
@@ -1909,8 +2271,10 @@
           "putts": 2,
           "yards": 529,
           "strokeIndex": 4,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 7,
+          "penaltyCodes": ""
         },
         {
           "number": 16,
@@ -1919,8 +2283,10 @@
           "putts": 2,
           "yards": 369,
           "strokeIndex": 6,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "hit",
+          "gir": false,
+          "adjustedStrokes": 5,
+          "penaltyCodes": "F"
         },
         {
           "number": 17,
@@ -1929,8 +2295,10 @@
           "putts": 1,
           "yards": 299,
           "strokeIndex": 18,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 4,
+          "penaltyCodes": ""
         },
         {
           "number": 18,
@@ -1939,8 +2307,10 @@
           "putts": 2,
           "yards": 159,
           "strokeIndex": 14,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 4,
+          "penaltyCodes": ""
         }
       ]
     },
@@ -1954,6 +2324,7 @@
       "fir": 36,
       "scoreValue": 43.8,
       "adjustedGross": 115,
+      "estimatedLostStrokes": 10.5,
       "detailSource": "Captured scorecard; gross strokes and putts reconcile to the round total.",
       "holes": [
         {
@@ -1963,8 +2334,10 @@
           "putts": 2,
           "yards": 339,
           "strokeIndex": 12,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "hit",
+          "gir": false,
+          "adjustedStrokes": 5,
+          "penaltyCodes": ""
         },
         {
           "number": 2,
@@ -1973,8 +2346,10 @@
           "putts": 2,
           "yards": 455,
           "strokeIndex": 16,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "left",
+          "gir": false,
+          "adjustedStrokes": 8,
+          "penaltyCodes": "F"
         },
         {
           "number": 3,
@@ -1983,8 +2358,10 @@
           "putts": 1,
           "yards": 169,
           "strokeIndex": 18,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "left",
+          "gir": false,
+          "adjustedStrokes": 4,
+          "penaltyCodes": ""
         },
         {
           "number": 4,
@@ -1993,8 +2370,10 @@
           "putts": 2,
           "yards": 459,
           "strokeIndex": 2,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "left",
+          "gir": false,
+          "adjustedStrokes": 8,
+          "penaltyCodes": "SF"
         },
         {
           "number": 5,
@@ -2003,8 +2382,10 @@
           "putts": 2,
           "yards": 343,
           "strokeIndex": 10,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "hit",
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": ""
         },
         {
           "number": 6,
@@ -2013,8 +2394,10 @@
           "putts": 2,
           "yards": 330,
           "strokeIndex": 8,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "hit",
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": ""
         },
         {
           "number": 7,
@@ -2023,8 +2406,10 @@
           "putts": 1,
           "yards": 193,
           "strokeIndex": 4,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 5,
+          "penaltyCodes": "D"
         },
         {
           "number": 8,
@@ -2033,8 +2418,10 @@
           "putts": 3,
           "yards": 310,
           "strokeIndex": 14,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "left",
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": "D"
         },
         {
           "number": 9,
@@ -2043,8 +2430,10 @@
           "putts": 2,
           "yards": 353,
           "strokeIndex": 6,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "left",
+          "gir": false,
+          "adjustedStrokes": 7,
+          "penaltyCodes": "S"
         },
         {
           "number": 10,
@@ -2053,8 +2442,10 @@
           "putts": 3,
           "yards": 423,
           "strokeIndex": 1,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 7,
+          "penaltyCodes": ""
         },
         {
           "number": 11,
@@ -2063,8 +2454,10 @@
           "putts": 2,
           "yards": 396,
           "strokeIndex": 7,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "left",
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": ""
         },
         {
           "number": 12,
@@ -2073,8 +2466,10 @@
           "putts": 2,
           "yards": 475,
           "strokeIndex": 11,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 8,
+          "penaltyCodes": "D"
         },
         {
           "number": 13,
@@ -2083,8 +2478,10 @@
           "putts": 2,
           "yards": 180,
           "strokeIndex": 15,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 5,
+          "penaltyCodes": "D"
         },
         {
           "number": 14,
@@ -2093,8 +2490,10 @@
           "putts": 2,
           "yards": 402,
           "strokeIndex": 3,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "left",
+          "gir": false,
+          "adjustedStrokes": 7,
+          "penaltyCodes": "D"
         },
         {
           "number": 15,
@@ -2103,8 +2502,10 @@
           "putts": 2,
           "yards": 369,
           "strokeIndex": 13,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "hit",
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": "SS"
         },
         {
           "number": 16,
@@ -2113,8 +2514,10 @@
           "putts": 3,
           "yards": 160,
           "strokeIndex": 17,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": "S"
         },
         {
           "number": 17,
@@ -2123,8 +2526,10 @@
           "putts": 2,
           "yards": 431,
           "strokeIndex": 5,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "left",
+          "gir": false,
+          "adjustedStrokes": 7,
+          "penaltyCodes": "D"
         },
         {
           "number": 18,
@@ -2133,8 +2538,10 @@
           "putts": 3,
           "yards": 500,
           "strokeIndex": 9,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "hit",
+          "gir": false,
+          "adjustedStrokes": 8,
+          "penaltyCodes": "D"
         }
       ]
     },
@@ -2148,6 +2555,7 @@
       "fir": 36,
       "scoreValue": 38,
       "adjustedGross": 109,
+      "estimatedLostStrokes": 7,
       "detailSource": "Captured scorecard; gross strokes and putts reconcile to the round total.",
       "holes": [
         {
@@ -2157,8 +2565,10 @@
           "putts": 2,
           "yards": 339,
           "strokeIndex": 12,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "hit",
+          "gir": false,
+          "adjustedStrokes": 5,
+          "penaltyCodes": ""
         },
         {
           "number": 2,
@@ -2167,8 +2577,10 @@
           "putts": 3,
           "yards": 455,
           "strokeIndex": 16,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "left",
+          "gir": false,
+          "adjustedStrokes": 8,
+          "penaltyCodes": "D"
         },
         {
           "number": 3,
@@ -2177,8 +2589,10 @@
           "putts": 2,
           "yards": 169,
           "strokeIndex": 18,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 4,
+          "penaltyCodes": ""
         },
         {
           "number": 4,
@@ -2187,8 +2601,10 @@
           "putts": 2,
           "yards": 459,
           "strokeIndex": 2,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "hit",
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": ""
         },
         {
           "number": 5,
@@ -2197,8 +2613,10 @@
           "putts": 3,
           "yards": 343,
           "strokeIndex": 10,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "left",
+          "gir": false,
+          "adjustedStrokes": 8,
+          "penaltyCodes": "D"
         },
         {
           "number": 6,
@@ -2207,8 +2625,10 @@
           "putts": 2,
           "yards": 330,
           "strokeIndex": 8,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "left",
+          "gir": false,
+          "adjustedStrokes": 8,
+          "penaltyCodes": "F"
         },
         {
           "number": 7,
@@ -2217,8 +2637,10 @@
           "putts": 2,
           "yards": 193,
           "strokeIndex": 4,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "hit",
+          "gir": true,
+          "adjustedStrokes": 3,
+          "penaltyCodes": ""
         },
         {
           "number": 8,
@@ -2227,8 +2649,10 @@
           "putts": 2,
           "yards": 310,
           "strokeIndex": 14,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "hit",
+          "gir": false,
+          "adjustedStrokes": 5,
+          "penaltyCodes": ""
         },
         {
           "number": 9,
@@ -2237,8 +2661,10 @@
           "putts": 2,
           "yards": 353,
           "strokeIndex": 6,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "left",
+          "gir": false,
+          "adjustedStrokes": 5,
+          "penaltyCodes": ""
         },
         {
           "number": 10,
@@ -2247,8 +2673,10 @@
           "putts": 3,
           "yards": 423,
           "strokeIndex": 1,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "left",
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": "F"
         },
         {
           "number": 11,
@@ -2257,8 +2685,10 @@
           "putts": 2,
           "yards": 396,
           "strokeIndex": 7,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "hit",
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": ""
         },
         {
           "number": 12,
@@ -2267,8 +2697,10 @@
           "putts": 2,
           "yards": 475,
           "strokeIndex": 11,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": "F"
         },
         {
           "number": 13,
@@ -2277,8 +2709,10 @@
           "putts": 2,
           "yards": 180,
           "strokeIndex": 15,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 6,
+          "penaltyCodes": "D"
         },
         {
           "number": 14,
@@ -2287,8 +2721,10 @@
           "putts": 2,
           "yards": 402,
           "strokeIndex": 3,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "hit",
+          "gir": false,
+          "adjustedStrokes": 7,
+          "penaltyCodes": ""
         },
         {
           "number": 15,
@@ -2297,8 +2733,10 @@
           "putts": 2,
           "yards": 369,
           "strokeIndex": 13,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "left",
+          "gir": false,
+          "adjustedStrokes": 8,
+          "penaltyCodes": "F"
         },
         {
           "number": 16,
@@ -2307,8 +2745,10 @@
           "putts": 1,
           "yards": 160,
           "strokeIndex": 17,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 3,
+          "penaltyCodes": ""
         },
         {
           "number": 17,
@@ -2317,8 +2757,10 @@
           "putts": 3,
           "yards": 431,
           "strokeIndex": 5,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 8,
+          "penaltyCodes": "DD"
         },
         {
           "number": 18,
@@ -2327,8 +2769,10 @@
           "putts": 1,
           "yards": 500,
           "strokeIndex": 9,
-          "teeAccuracy": null,
-          "gir": null
+          "teeAccuracy": "right",
+          "gir": false,
+          "adjustedStrokes": 7,
+          "penaltyCodes": ""
         }
       ]
     }

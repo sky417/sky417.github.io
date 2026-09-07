@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { analyze, validateRounds, describeHoles, rollingAverage, courseHoleGroups } from '../../golf/analysis.mjs';
+import { buildRounds } from './build-data.mjs';
 
 const makeRound = (overrides = {}) => ({
   date: '2026-09-06', course: 'Test Course', tee: 'White', score: 90, putts: 36, gir: 0, fir: null, scoreValue: null, adjustedGross: null,
@@ -108,11 +109,129 @@ test('September 6 uses gross 109, not adjusted gross 108, for performance analys
   const pars = [4,4,3,5,4,4,3,4,4,4,4,3,4,5,4,4,3,5];
   const strokes = [6,5,5,8,6,6,4,5,6,6,6,5,7,7,6,9,5,7];
   const putts = [3,2,2,2,2,2,2,3,3,2,2,3,1,2,3,2,2,2];
+  const adjustedStrokes = [...strokes];
+  adjustedStrokes[15] = 8;
   const round = makeRound({ score: 109, putts: 40, adjustedGross: 108 });
-  round.holes = round.holes.map((hole, index) => ({ ...hole, par: pars[index], strokes: strokes[index], putts: putts[index] }));
+  round.holes = round.holes.map((hole, index) => ({
+    ...hole, par: pars[index], strokes: strokes[index], putts: putts[index], adjustedStrokes: adjustedStrokes[index],
+  }));
   const report = analyze([round]);
   assert.equal(report.summary.average, 109);
   assert.equal(report.summary.firstHalf.strokes, 51);
   assert.equal(report.summary.secondHalf.strokes, 58);
+  assert.equal(round.holes[13].strokes, 7);
+  assert.equal(round.holes[13].adjustedStrokes, 7);
+  assert.equal(round.holes[15].strokes, 9);
+  assert.equal(round.holes[15].adjustedStrokes, 8);
   assert.deepEqual(report.holeStats.distribution, { eagleOrBetter: 0, birdie: 0, par: 0, bogey: 3, double: 12, triplePlus: 3 });
+});
+
+test('accepts optional supplementary fields while preserving explicit zero and blank event records', () => {
+  const round = makeRound({ adjustedGross: 90, estimatedLostStrokes: 0 });
+  round.holes = round.holes.map((hole, index) => ({
+    ...hole,
+    strokeIndex: index + 1,
+    adjustedStrokes: hole.strokes,
+    gir: false,
+    penaltyCodes: index === 0 ? '' : null,
+  }));
+  assert.equal(validateRounds([round])[0].estimatedLostStrokes, 0);
+  assert.equal(round.holes[0].penaltyCodes, '');
+});
+
+test('omitted legacy optional fields do not invent direction coverage', () => {
+  const round = makeRound();
+  delete round.adjustedGross;
+  for (const hole of round.holes) delete hole.teeAccuracy;
+  const report = analyze([round]);
+  assert.deepEqual(report.directionCoverage, { holes: 0, rounds: 0 });
+  assert.ok(report.directions.every((direction) => direction.count === 0));
+});
+
+test('validates supplementary values and reconciles complete adjusted and GIR grids', () => {
+  const round = makeRound({ adjustedGross: 90, gir: 0 });
+  round.holes = round.holes.map((hole, index) => ({
+    ...hole,
+    strokeIndex: index + 1,
+    adjustedStrokes: hole.strokes,
+    gir: false,
+    penaltyCodes: index === 0 ? 'FS' : null,
+  }));
+  assert.equal(validateRounds([round]).length, 1);
+
+  const invalidIndex = structuredClone(round);
+  invalidIndex.holes[0].strokeIndex = 19;
+  assert.throws(() => validateRounds([invalidIndex]), /stroke index/);
+
+  const invalidAdjusted = structuredClone(round);
+  invalidAdjusted.holes[0].adjustedStrokes = 6;
+  assert.throws(() => validateRounds([invalidAdjusted]), /adjusted strokes exceed/);
+
+  const invalidEvent = structuredClone(round);
+  invalidEvent.holes[0].penaltyCodes = 'X';
+  assert.throws(() => validateRounds([invalidEvent]), /event codes/);
+
+  const mismatchedGIR = structuredClone(round);
+  mismatchedGIR.gir = 6;
+  assert.throws(() => validateRounds([mismatchedGIR]), /full hole GIR/);
+});
+
+test('allows partial GIR grids but rejects partial adjusted grids and totals that do not reconcile', () => {
+  const partialGir = makeRound({ gir: 100 });
+  partialGir.holes[0].gir = true;
+  assert.equal(validateRounds([partialGir]).length, 1);
+
+  const partialAdjusted = makeRound({ adjustedGross: 90 });
+  partialAdjusted.holes[0].adjustedStrokes = 5;
+  assert.throws(() => validateRounds([partialAdjusted]), /adjusted strokes must cover/);
+
+  const mismatchedAdjusted = makeRound({ adjustedGross: 89 });
+  mismatchedAdjusted.holes = mismatchedAdjusted.holes.map((hole) => ({ ...hole, adjustedStrokes: 5 }));
+  assert.throws(() => validateRounds([mismatchedAdjusted]), /adjusted hole strokes/);
+});
+
+test('builder preserves null, zero, and blank supplementary data and rejects malformed supplied grids', () => {
+  const holes = {
+    par: Array(18).fill(4),
+    strokes: Array(18).fill(5),
+    putts: Array(18).fill(2),
+    yards: Array(18).fill(null),
+    stroke_index: Array.from({ length: 18 }, (_, index) => index + 1),
+    tee_accuracy: Array(18).fill(null),
+    gir: Array(18).fill(false),
+    adjusted_gross_strokes: Array(18).fill(5),
+    penalty_codes: ['', ...Array(17).fill(null)],
+  };
+  const raw = {
+    rounds: [{
+      date: '2026-09-06',
+      course: 'Test Course',
+      tee: 'White',
+      history: { score: 90, putts: 36, gir_percent: 0, fir_percent: null, score_value: null },
+      summary: {
+        displayed_adjusted_gross_totals: { total_score: 90 },
+        penalty_row_total_value_observed: 0,
+      },
+      holes,
+    }],
+  };
+  const [round] = buildRounds(raw);
+  assert.equal(round.estimatedLostStrokes, 0);
+  assert.equal(round.holes[0].penaltyCodes, '');
+  assert.equal(round.holes[0].adjustedStrokes, 5);
+  assert.equal(validateRounds([round]).length, 1);
+
+  const unavailable = structuredClone(raw);
+  delete unavailable.rounds[0].holes.adjusted_gross_strokes;
+  delete unavailable.rounds[0].holes.penalty_codes;
+  unavailable.rounds[0].summary.penalty_row_total_value_observed = null;
+  const [unavailableRound] = buildRounds(unavailable);
+  assert.ok(unavailableRound.holes.every((hole) => hole.adjustedStrokes === null && hole.penaltyCodes === null));
+  assert.equal(unavailableRound.estimatedLostStrokes, null);
+
+  for (const key of ['yards', 'stroke_index', 'adjusted_gross_strokes', 'penalty_codes']) {
+    const malformed = structuredClone(raw);
+    malformed.rounds[0].holes[key] = Array(17).fill(null);
+    assert.throws(() => buildRounds(malformed), new RegExp(`${key} must contain exactly 18`));
+  }
 });
