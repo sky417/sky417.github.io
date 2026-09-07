@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A data-led review of the 2026 golf season.">
+  <title>Round / 2026 — Golf performance report</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.mjs"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to report</a>
+
+  <header class="topbar">
+    <div class="topbar__inner">
+      <a class="brand" href="#top" aria-label="Round 2026, back to top">
+        <span class="brand__mark" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </span>
+        <span>ROUND <b>/</b> 2026</span>
+      </a>
+      <nav class="section-nav" aria-label="Report sections">
+        <a href="#overview">Overview</a>
+        <a href="#trend">Trend</a>
+        <a href="#holes">Holes</a>
+        <a href="#putting">Putting</a>
+        <a href="#course-dna">Course DNA</a>
+        <a href="#priorities">Priorities</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__copy">
+        <p class="eyebrow">2026 season review</p>
+        <h1 id="hero-title">Your game,<br><em>in focus.</em></h1>
+        <p class="hero__lede">A clear look at scoring, round rhythm, putting, and the course patterns the records can actually support.</p>
+        <div class="hero__meta" id="hero-meta" aria-live="polite">
+          <span class="skeleton skeleton--line"></span>
+        </div>
+      </div>
+      <div class="hero__art" aria-hidden="true">
+        <svg viewBox="0 0 520 350" focusable="false">
+          <path class="hero__contour hero__contour--1" d="M8 292C88 205 151 261 216 178c61-77 89-105 170-74 58 22 90-12 126-57"/>
+          <path class="hero__contour hero__contour--2" d="M26 326c81-91 146-32 217-119 59-72 102-79 165-49 45 21 76 0 109-34"/>
+          <path class="hero__fairway" d="M246 319c-63-59-56-121-10-167 42-42 51-79 38-129 50 13 93 56 93 106 0 42-23 71-55 102-28 28-39 54-34 88z"/>
+          <path class="hero__fairway-line" d="M270 292c-19-45-5-81 27-116 30-33 43-69 30-111"/>
+          <circle class="hero__green" cx="322" cy="65" r="26"/>
+          <circle class="hero__cup" cx="322" cy="65" r="4"/>
+          <path class="hero__flag" d="M322 65V24m0 2 34 10-34 11"/>
+          <g class="hero__ticks">
+            <path d="M64 74h44M64 91h70M64 108h28"/>
+            <path d="M399 271h61M421 288h39"/>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <div class="filter-dock" id="filter-dock">
+      <div>
+        <label for="course-filter">Course lens</label>
+        <p id="filter-description">Every section responds to this filter.</p>
+      </div>
+      <div class="filter-dock__control">
+        <select id="course-filter" aria-describedby="filter-description" disabled>
+          <option>Loading data…</option>
+        </select>
+        <button class="button button--quiet" id="reset-filter" type="button" disabled>Reset</button>
+      </div>
+    </div>
+
+    <div id="status" class="status-shell" role="status" aria-live="polite">
+      <div class="loading-card">
+        <span class="loading-card__spinner" aria-hidden="true"></span>
+        <div>
+          <strong>Building the season view</strong>
+          <span>Loading the published round data.</span>
+        </div>
+      </div>
+    </div>
+
+    <div id="report" hidden>
+      <section class="report-section" id="overview" aria-labelledby="overview-title">
+        <header class="section-heading">
+          <div>
+            <p class="eyebrow">01 / Overview</p>
+            <h2 id="overview-title">The season at a glance</h2>
+          </div>
+          <p>Round-level measures cover every selected round. Hole-level measures use detailed scorecards only.</p>
+        </header>
+        <div id="overview-content"></div>
+      </section>
+
+      <section class="report-section report-section--tint" id="trend" aria-labelledby="trend-title">
+        <header class="section-heading">
+          <div>
+            <p class="eyebrow">02 / Season trend</p>
+            <h2 id="trend-title">Scores through time</h2>
+          </div>
+          <p>Actual round dates, individual results, and a three-round rolling mean that begins only after a complete window.</p>
+        </header>
+        <div id="trend-content"></div>
+      </section>
+
+      <section class="report-section" id="rhythm" aria-labelledby="rhythm-title">
+        <header class="section-heading">
+          <div>
+            <p class="eyebrow">03 / Round rhythm</p>
+            <h2 id="rhythm-title">Where strokes accumulate</h2>
+          </div>
+          <p>Opening, middle, and closing segments each cover six holes. The comparison is average strokes over par per hole, not raw score.</p>
+        </header>
+        <div id="rhythm-content"></div>
+      </section>
+
+      <section class="report-section report-section--tint" id="holes" aria-labelledby="holes-title">
+        <header class="section-heading">
+          <div>
+            <p class="eyebrow">04 / Hole patterns</p>
+            <h2 id="holes-title">Read the scorecards</h2>
+          </div>
+          <p>Course-specific heatmaps preserve hole identity. Repeat-hole comparisons never combine different courses or tees.</p>
+        </header>
+        <div id="holes-content"></div>
+      </section>
+
+      <section class="report-section" id="putting" aria-labelledby="putting-title">
+        <header class="section-heading">
+          <div>
+            <p class="eyebrow">05 / Putting</p>
+            <h2 id="putting-title">The shape of the putting record</h2>
+          </div>
+          <p>Counts come only from captured hole grids. Total putts also depend on greens reached and first-putt distance, which is not recorded.</p>
+        </header>
+        <div id="putting-content"></div>
+      </section>
+
+      <section class="report-section report-section--forest" id="course-dna" aria-labelledby="dna-title">
+        <header class="section-heading">
+          <div>
+            <p class="eyebrow">06 / Course DNA</p>
+            <h2 id="dna-title">Layout evidence, not lore</h2>
+          </div>
+          <p>Official descriptions provide context. Shape groups include only explicitly documented geometry—never inference from a map.</p>
+        </header>
+        <div id="dna-content"></div>
+      </section>
+
+      <section class="report-section" id="priorities" aria-labelledby="priorities-title">
+        <header class="section-heading">
+          <div>
+            <p class="eyebrow">07 / Next-round experiments</p>
+            <h2 id="priorities-title">Turn observations into tests</h2>
+          </div>
+          <p>These are measurable experiments, not forecasts. Hypothetical scoring scenarios are independent and should not be added together.</p>
+        </header>
+        <div id="priorities-content"></div>
+      </section>
+
+      <section class="report-section report-section--compact" id="methodology" aria-labelledby="method-title">
+        <header class="section-heading">
+          <div>
+            <p class="eyebrow">08 / Notes</p>
+            <h2 id="method-title">Methodology &amp; sources</h2>
+          </div>
+        </header>
+        <div id="method-content"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <span>ROUND / 2026</span>
+    <span>A static, data-derived season report.</span>
+  </footer>
+</body>
+</html>

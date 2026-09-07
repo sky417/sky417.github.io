@@ -1,0 +1,2239 @@
+{
+  "schemaVersion": 1,
+  "title": "2026 season report",
+  "through": "2026-09-06",
+  "generatedAt": "2026-09-07T04:47:37.993Z",
+  "rounds": [
+    {
+      "date": "2026-09-06",
+      "course": "The Redwoods Golf Course",
+      "tee": "Combo",
+      "score": 109,
+      "putts": 40,
+      "gir": 6,
+      "fir": 43,
+      "scoreValue": 33.9,
+      "adjustedGross": 108,
+      "detailSource": "Captured scorecard; gross strokes and putts reconcile to the round total.",
+      "holes": [
+        {
+          "number": 1,
+          "par": 4,
+          "strokes": 6,
+          "putts": 3,
+          "yards": 425,
+          "strokeIndex": 13,
+          "teeAccuracy": "left",
+          "gir": false
+        },
+        {
+          "number": 2,
+          "par": 4,
+          "strokes": 5,
+          "putts": 2,
+          "yards": 366,
+          "strokeIndex": 9,
+          "teeAccuracy": "hit",
+          "gir": false
+        },
+        {
+          "number": 3,
+          "par": 3,
+          "strokes": 5,
+          "putts": 2,
+          "yards": 160,
+          "strokeIndex": 17,
+          "teeAccuracy": "left",
+          "gir": false
+        },
+        {
+          "number": 4,
+          "par": 5,
+          "strokes": 8,
+          "putts": 2,
+          "yards": 524,
+          "strokeIndex": 5,
+          "teeAccuracy": "right",
+          "gir": false
+        },
+        {
+          "number": 5,
+          "par": 4,
+          "strokes": 6,
+          "putts": 2,
+          "yards": 376,
+          "strokeIndex": 7,
+          "teeAccuracy": "missed",
+          "gir": false
+        },
+        {
+          "number": 6,
+          "par": 4,
+          "strokes": 6,
+          "putts": 2,
+          "yards": 403,
+          "strokeIndex": 3,
+          "teeAccuracy": "left",
+          "gir": false
+        },
+        {
+          "number": 7,
+          "par": 3,
+          "strokes": 4,
+          "putts": 2,
+          "yards": 180,
+          "strokeIndex": 11,
+          "teeAccuracy": "short",
+          "gir": false
+        },
+        {
+          "number": 8,
+          "par": 4,
+          "strokes": 5,
+          "putts": 3,
+          "yards": 321,
+          "strokeIndex": 15,
+          "teeAccuracy": "hit",
+          "gir": true
+        },
+        {
+          "number": 9,
+          "par": 4,
+          "strokes": 6,
+          "putts": 3,
+          "yards": 420,
+          "strokeIndex": 1,
+          "teeAccuracy": "hit",
+          "gir": false
+        },
+        {
+          "number": 10,
+          "par": 4,
+          "strokes": 6,
+          "putts": 2,
+          "yards": 345,
+          "strokeIndex": 14,
+          "teeAccuracy": "hit",
+          "gir": false
+        },
+        {
+          "number": 11,
+          "par": 4,
+          "strokes": 6,
+          "putts": 2,
+          "yards": 433,
+          "strokeIndex": 2,
+          "teeAccuracy": "hit",
+          "gir": false
+        },
+        {
+          "number": 12,
+          "par": 3,
+          "strokes": 5,
+          "putts": 3,
+          "yards": 138,
+          "strokeIndex": 18,
+          "teeAccuracy": "right",
+          "gir": false
+        },
+        {
+          "number": 13,
+          "par": 4,
+          "strokes": 7,
+          "putts": 1,
+          "yards": 398,
+          "strokeIndex": 4,
+          "teeAccuracy": "right",
+          "gir": false
+        },
+        {
+          "number": 14,
+          "par": 5,
+          "strokes": 7,
+          "putts": 2,
+          "yards": 473,
+          "strokeIndex": 10,
+          "teeAccuracy": "right",
+          "gir": false
+        },
+        {
+          "number": 15,
+          "par": 4,
+          "strokes": 6,
+          "putts": 3,
+          "yards": 334,
+          "strokeIndex": 12,
+          "teeAccuracy": "right",
+          "gir": false
+        },
+        {
+          "number": 16,
+          "par": 4,
+          "strokes": 9,
+          "putts": 2,
+          "yards": 379,
+          "strokeIndex": 6,
+          "teeAccuracy": "left",
+          "gir": false
+        },
+        {
+          "number": 17,
+          "par": 3,
+          "strokes": 5,
+          "putts": 2,
+          "yards": 166,
+          "strokeIndex": 16,
+          "teeAccuracy": "right",
+          "gir": false
+        },
+        {
+          "number": 18,
+          "par": 5,
+          "strokes": 7,
+          "putts": 2,
+          "yards": 501,
+          "strokeIndex": 8,
+          "teeAccuracy": "hit",
+          "gir": false
+        }
+      ]
+    },
+    {
+      "date": "2026-09-05",
+      "course": "Northlands Golf Course",
+      "tee": "Blue/White",
+      "score": 104,
+      "putts": 38,
+      "gir": 11,
+      "fir": 8,
+      "scoreValue": 31.8,
+      "adjustedGross": null,
+      "detailSource": "Captured scorecard; gross strokes and putts reconcile to the round total.",
+      "holes": [
+        {
+          "number": 1,
+          "par": 4,
+          "strokes": 6,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 2,
+          "par": 4,
+          "strokes": 6,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 3,
+          "par": 3,
+          "strokes": 2,
+          "putts": 1,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 4,
+          "par": 5,
+          "strokes": 9,
+          "putts": 4,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 5,
+          "par": 4,
+          "strokes": 5,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 6,
+          "par": 4,
+          "strokes": 5,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 7,
+          "par": 4,
+          "strokes": 6,
+          "putts": 1,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 8,
+          "par": 3,
+          "strokes": 6,
+          "putts": 3,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 9,
+          "par": 4,
+          "strokes": 7,
+          "putts": 3,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 10,
+          "par": 4,
+          "strokes": 6,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 11,
+          "par": 4,
+          "strokes": 4,
+          "putts": 1,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 12,
+          "par": 3,
+          "strokes": 5,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 13,
+          "par": 4,
+          "strokes": 7,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 14,
+          "par": 3,
+          "strokes": 4,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 15,
+          "par": 5,
+          "strokes": 7,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 16,
+          "par": 3,
+          "strokes": 5,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 17,
+          "par": 5,
+          "strokes": 5,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 18,
+          "par": 5,
+          "strokes": 9,
+          "putts": 3,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        }
+      ]
+    },
+    {
+      "date": "2026-08-28",
+      "course": "Northlands Golf Course",
+      "tee": "Blue/White",
+      "score": 96,
+      "putts": 36,
+      "gir": 22,
+      "fir": 31,
+      "scoreValue": 24.1,
+      "adjustedGross": null,
+      "detailSource": "Captured scorecard; gross strokes and putts reconcile to the round total.",
+      "holes": [
+        {
+          "number": 1,
+          "par": 4,
+          "strokes": 5,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 2,
+          "par": 4,
+          "strokes": 4,
+          "putts": 1,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 3,
+          "par": 3,
+          "strokes": 3,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 4,
+          "par": 5,
+          "strokes": 5,
+          "putts": 1,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 5,
+          "par": 4,
+          "strokes": 8,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 6,
+          "par": 4,
+          "strokes": 4,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 7,
+          "par": 4,
+          "strokes": 6,
+          "putts": 1,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 8,
+          "par": 3,
+          "strokes": 5,
+          "putts": 3,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 9,
+          "par": 4,
+          "strokes": 7,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 10,
+          "par": 4,
+          "strokes": 8,
+          "putts": 3,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 11,
+          "par": 4,
+          "strokes": 5,
+          "putts": 3,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 12,
+          "par": 3,
+          "strokes": 4,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 13,
+          "par": 4,
+          "strokes": 5,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 14,
+          "par": 3,
+          "strokes": 5,
+          "putts": 3,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 15,
+          "par": 5,
+          "strokes": 6,
+          "putts": 1,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 16,
+          "par": 3,
+          "strokes": 4,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 17,
+          "par": 5,
+          "strokes": 5,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 18,
+          "par": 5,
+          "strokes": 7,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        }
+      ]
+    },
+    {
+      "date": "2026-08-08",
+      "course": "Langara Golf Course",
+      "tee": "Tee 1",
+      "score": 101,
+      "putts": 37,
+      "gir": 22,
+      "fir": 29,
+      "scoreValue": 31.5,
+      "adjustedGross": null,
+      "detailSource": "Captured scorecard; gross strokes and putts reconcile to the round total.",
+      "holes": [
+        {
+          "number": 1,
+          "par": 4,
+          "strokes": 8,
+          "putts": 3,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 2,
+          "par": 3,
+          "strokes": 4,
+          "putts": 3,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 3,
+          "par": 5,
+          "strokes": 5,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 4,
+          "par": 4,
+          "strokes": 6,
+          "putts": 3,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 5,
+          "par": 4,
+          "strokes": 6,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 6,
+          "par": 4,
+          "strokes": 7,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 7,
+          "par": 4,
+          "strokes": 6,
+          "putts": 1,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 8,
+          "par": 3,
+          "strokes": 4,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 9,
+          "par": 4,
+          "strokes": 8,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 10,
+          "par": 4,
+          "strokes": 6,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 11,
+          "par": 5,
+          "strokes": 5,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 12,
+          "par": 3,
+          "strokes": 4,
+          "putts": 1,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 13,
+          "par": 4,
+          "strokes": 6,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 14,
+          "par": 3,
+          "strokes": 3,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 15,
+          "par": 4,
+          "strokes": 5,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 16,
+          "par": 5,
+          "strokes": 7,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 17,
+          "par": 4,
+          "strokes": 6,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 18,
+          "par": 4,
+          "strokes": 5,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        }
+      ]
+    },
+    {
+      "date": "2026-07-29",
+      "course": "Northlands Golf Course",
+      "tee": "Blue/White",
+      "score": 102,
+      "putts": 37,
+      "gir": 11,
+      "fir": 15,
+      "scoreValue": 30,
+      "adjustedGross": null,
+      "detailSource": "Captured scorecard; gross strokes and putts reconcile to the round total.",
+      "holes": [
+        {
+          "number": 1,
+          "par": 4,
+          "strokes": 8,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 2,
+          "par": 4,
+          "strokes": 6,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 3,
+          "par": 3,
+          "strokes": 5,
+          "putts": 3,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 4,
+          "par": 5,
+          "strokes": 5,
+          "putts": 1,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 5,
+          "par": 4,
+          "strokes": 7,
+          "putts": 1,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 6,
+          "par": 4,
+          "strokes": 4,
+          "putts": 1,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 7,
+          "par": 4,
+          "strokes": 5,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 8,
+          "par": 3,
+          "strokes": 4,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 9,
+          "par": 4,
+          "strokes": 5,
+          "putts": 3,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 10,
+          "par": 4,
+          "strokes": 7,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 11,
+          "par": 4,
+          "strokes": 6,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 12,
+          "par": 3,
+          "strokes": 5,
+          "putts": 3,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 13,
+          "par": 4,
+          "strokes": 6,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 14,
+          "par": 3,
+          "strokes": 5,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 15,
+          "par": 5,
+          "strokes": 7,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 16,
+          "par": 3,
+          "strokes": 3,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 17,
+          "par": 5,
+          "strokes": 6,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 18,
+          "par": 5,
+          "strokes": 8,
+          "putts": 3,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        }
+      ]
+    },
+    {
+      "date": "2026-07-25",
+      "course": "The Redwoods Golf Course",
+      "tee": "Combo",
+      "score": 97,
+      "putts": 31,
+      "gir": 11,
+      "fir": 50,
+      "scoreValue": 23.9,
+      "adjustedGross": null,
+      "detailSource": "Captured scorecard; gross strokes and putts reconcile to the round total.",
+      "holes": [
+        {
+          "number": 1,
+          "par": 4,
+          "strokes": 7,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 2,
+          "par": 4,
+          "strokes": 6,
+          "putts": 1,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 3,
+          "par": 3,
+          "strokes": 2,
+          "putts": 1,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 4,
+          "par": 5,
+          "strokes": 8,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 5,
+          "par": 4,
+          "strokes": 5,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 6,
+          "par": 4,
+          "strokes": 7,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 7,
+          "par": 3,
+          "strokes": 4,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 8,
+          "par": 4,
+          "strokes": 5,
+          "putts": 1,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 9,
+          "par": 4,
+          "strokes": 5,
+          "putts": 1,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 10,
+          "par": 4,
+          "strokes": 4,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 11,
+          "par": 4,
+          "strokes": 6,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 12,
+          "par": 3,
+          "strokes": 4,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 13,
+          "par": 4,
+          "strokes": 6,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 14,
+          "par": 5,
+          "strokes": 8,
+          "putts": 3,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 15,
+          "par": 4,
+          "strokes": 4,
+          "putts": 1,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 16,
+          "par": 4,
+          "strokes": 5,
+          "putts": 1,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 17,
+          "par": 3,
+          "strokes": 5,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 18,
+          "par": 5,
+          "strokes": 6,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        }
+      ]
+    },
+    {
+      "date": "2026-06-21",
+      "course": "Burnaby Mountain Golf Course",
+      "tee": "White",
+      "score": 105,
+      "putts": 36,
+      "gir": 11,
+      "fir": 50,
+      "scoreValue": 32.1,
+      "adjustedGross": null,
+      "detailSource": "Captured scorecard; gross strokes and putts reconcile to the round total.",
+      "holes": [
+        {
+          "number": 1,
+          "par": 5,
+          "strokes": 7,
+          "putts": 1,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 2,
+          "par": 4,
+          "strokes": 6,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 3,
+          "par": 5,
+          "strokes": 9,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 4,
+          "par": 3,
+          "strokes": 4,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 5,
+          "par": 4,
+          "strokes": 6,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 6,
+          "par": 3,
+          "strokes": 5,
+          "putts": 3,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 7,
+          "par": 4,
+          "strokes": 7,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 8,
+          "par": 4,
+          "strokes": 6,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 9,
+          "par": 4,
+          "strokes": 4,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 10,
+          "par": 4,
+          "strokes": 7,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 11,
+          "par": 4,
+          "strokes": 4,
+          "putts": 1,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 12,
+          "par": 4,
+          "strokes": 6,
+          "putts": 3,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 13,
+          "par": 3,
+          "strokes": 3,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 14,
+          "par": 4,
+          "strokes": 8,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 15,
+          "par": 3,
+          "strokes": 4,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 16,
+          "par": 5,
+          "strokes": 7,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 17,
+          "par": 4,
+          "strokes": 6,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 18,
+          "par": 4,
+          "strokes": 6,
+          "putts": 2,
+          "yards": null,
+          "strokeIndex": null,
+          "teeAccuracy": null,
+          "gir": null
+        }
+      ]
+    },
+    {
+      "date": "2026-06-20",
+      "course": "Fraserview Golf Course",
+      "tee": "Tee 2",
+      "score": 106,
+      "putts": 38,
+      "gir": 17,
+      "fir": 29,
+      "scoreValue": 35.1,
+      "adjustedGross": null,
+      "detailSource": "Round summary only; the detailed scorecard was not available.",
+      "holes": null
+    },
+    {
+      "date": "2026-06-06",
+      "course": "Riverway Golf Course",
+      "tee": "Blue",
+      "score": 86,
+      "putts": 32,
+      "gir": 28,
+      "fir": 36,
+      "scoreValue": 13.5,
+      "adjustedGross": null,
+      "detailSource": "Round summary only; the detailed scorecard was not available.",
+      "holes": null
+    },
+    {
+      "date": "2026-05-16",
+      "course": "Royalwood Golf & RV Resort",
+      "tee": "Blue/White",
+      "score": 96,
+      "putts": 34,
+      "gir": 6,
+      "fir": 21,
+      "scoreValue": 26.2,
+      "adjustedGross": null,
+      "detailSource": "Round summary only; the detailed scorecard was not available.",
+      "holes": null
+    },
+    {
+      "date": "2026-05-09",
+      "course": "Fraserview Golf Course",
+      "tee": "Tee 2",
+      "score": 115,
+      "putts": 38,
+      "gir": null,
+      "fir": 36,
+      "scoreValue": 43.8,
+      "adjustedGross": null,
+      "detailSource": "Round summary only; the detailed scorecard was not available.",
+      "holes": null
+    },
+    {
+      "date": "2026-04-25",
+      "course": "Fraserview Golf Course",
+      "tee": "Tee 2",
+      "score": 109,
+      "putts": 38,
+      "gir": 6,
+      "fir": 36,
+      "scoreValue": 38,
+      "adjustedGross": null,
+      "detailSource": "Round summary only; the detailed scorecard was not available.",
+      "holes": null
+    }
+  ],
+  "research": {
+    "researchedAt": "2026-09-07",
+    "methodology": "Public-source research only. Course and municipal websites were preferred. Hole shape is classified only when official text states a dogleg or straight layout; otherwise it is unknown. No played-tee yardages were inferred. Diagram-only conclusions would be labeled map-inference, but the included hole claims are explicit text except where noted in limitations.",
+    "courses": [
+      {
+        "name": "The Redwoods Golf Course",
+        "overview": "A tree-lined course on split-level land, designed to fit its natural Langley setting.",
+        "features": [
+          "tree-lined",
+          "split-level property",
+          "coastal mountain backdrop",
+          "natural setting"
+        ],
+        "sources": [
+          {
+            "title": "Official course overview",
+            "url": "https://www.redwoods-golf.com/course"
+          },
+          {
+            "title": "Hole-by-hole tour",
+            "url": "https://www.redwoods-golf.com/course/scorecard"
+          },
+          {
+            "title": "Official scorecard - front",
+            "url": "https://www.redwoods-golf.com/images/RWGC_Scorecard_2025_page-0001.jpg"
+          },
+          {
+            "title": "Official scorecard - back",
+            "url": "https://www.redwoods-golf.com/images/RWGC_Scorecard_2025_page-0002.jpg"
+          },
+          {
+            "title": "Official course map",
+            "url": "https://www.redwoods-golf.com/images/scorecard/Overhead_Layout.jpg"
+          }
+        ],
+        "holes": [
+          {
+            "number": 1,
+            "shape": "unknown",
+            "terrain": [
+              "slight-downhill"
+            ],
+            "hazards": [
+              "fairway bunkers"
+            ],
+            "description": "Downhill approach to a green sloping left-to-right.",
+            "sourceUrl": "https://www.redwoods-golf.com/images/scorecard/Hole_1.jpg",
+            "confidence": "explicit"
+          },
+          {
+            "number": 2,
+            "shape": "unknown",
+            "terrain": [
+              "extreme-downhill"
+            ],
+            "hazards": [],
+            "description": "Short, narrow hole with a strongly downhill second shot.",
+            "sourceUrl": "https://www.redwoods-golf.com/images/scorecard/Hole_2.jpg",
+            "confidence": "explicit"
+          },
+          {
+            "number": 3,
+            "shape": "unknown",
+            "terrain": [],
+            "hazards": [
+              "creek"
+            ],
+            "description": "Creek carry to a small two-tier green.",
+            "sourceUrl": "https://www.redwoods-golf.com/images/scorecard/Hole_3.jpg",
+            "confidence": "explicit"
+          },
+          {
+            "number": 4,
+            "shape": "unknown",
+            "terrain": [],
+            "hazards": [],
+            "description": "Narrow par 5 favoring a controlled lay-up.",
+            "sourceUrl": "https://www.redwoods-golf.com/images/scorecard/Hole_4.jpg",
+            "confidence": "explicit"
+          },
+          {
+            "number": 5,
+            "shape": "dogleg-right",
+            "terrain": [],
+            "hazards": [
+              "trees"
+            ],
+            "description": "Slight right dogleg; the green is guarded by a mound.",
+            "sourceUrl": "https://www.redwoods-golf.com/images/scorecard/Hole_5.jpg",
+            "confidence": "explicit"
+          },
+          {
+            "number": 6,
+            "shape": "straight",
+            "terrain": [],
+            "hazards": [],
+            "description": "Long straight par 4 to a narrow angled green.",
+            "sourceUrl": "https://www.redwoods-golf.com/images/scorecard/Hole_6.jpg",
+            "confidence": "explicit"
+          },
+          {
+            "number": 7,
+            "shape": "unknown",
+            "terrain": [
+              "slight-uphill"
+            ],
+            "hazards": [
+              "deep front-left bunker"
+            ],
+            "description": "Uphill par 3 with a two-tier green.",
+            "sourceUrl": "https://www.redwoods-golf.com/images/scorecard/Hole_7.jpg",
+            "confidence": "explicit"
+          },
+          {
+            "number": 8,
+            "shape": "unknown",
+            "terrain": [
+              "uphill"
+            ],
+            "hazards": [
+              "fairway bunkers"
+            ],
+            "description": "Short uphill par 4 with bunkers on both sides.",
+            "sourceUrl": "https://www.redwoods-golf.com/images/scorecard/Hole_8.jpg",
+            "confidence": "explicit"
+          },
+          {
+            "number": 9,
+            "shape": "dogleg-left",
+            "terrain": [
+              "uphill-tee-shot",
+              "downhill-approach"
+            ],
+            "hazards": [],
+            "description": "Left dogleg with contrasting uphill and downhill shots.",
+            "sourceUrl": "https://www.redwoods-golf.com/images/scorecard/Hole_9.jpg",
+            "confidence": "explicit"
+          },
+          {
+            "number": 10,
+            "shape": "unknown",
+            "terrain": [],
+            "hazards": [
+              "left fairway bunkers",
+              "creek before green"
+            ],
+            "description": "Lay-up hole with bunkers left and creek at the green.",
+            "sourceUrl": "https://www.redwoods-golf.com/images/scorecard/Hole_10.jpg",
+            "confidence": "explicit"
+          },
+          {
+            "number": 11,
+            "shape": "unknown",
+            "terrain": [],
+            "hazards": [
+              "trees left"
+            ],
+            "description": "Right-side positioning avoids trees guarding the left.",
+            "sourceUrl": "https://www.redwoods-golf.com/images/scorecard/Hole_11.jpg",
+            "confidence": "explicit"
+          },
+          {
+            "number": 12,
+            "shape": "unknown",
+            "terrain": [
+              "uphill"
+            ],
+            "hazards": [],
+            "description": "Short uphill par 3 where staying below the hole matters.",
+            "sourceUrl": "https://www.redwoods-golf.com/images/scorecard/Hole_12.jpg",
+            "confidence": "explicit"
+          },
+          {
+            "number": 13,
+            "shape": "unknown",
+            "terrain": [
+              "elevated-tee"
+            ],
+            "hazards": [
+              "right fairway bunkers",
+              "pond left"
+            ],
+            "description": "Elevated drive; pond begins left near the 100-yard marker.",
+            "sourceUrl": "https://www.redwoods-golf.com/images/scorecard/Hole_13.jpg",
+            "confidence": "explicit"
+          },
+          {
+            "number": 14,
+            "shape": "dogleg-right",
+            "terrain": [],
+            "hazards": [
+              "mound hiding green"
+            ],
+            "description": "Right dogleg with a risky corner cut and hidden green.",
+            "sourceUrl": "https://www.redwoods-golf.com/images/scorecard/Hole_14.jpg",
+            "confidence": "explicit"
+          },
+          {
+            "number": 15,
+            "shape": "unknown",
+            "terrain": [],
+            "hazards": [
+              "trees"
+            ],
+            "description": "Short, narrow, tree-lined fairway to a small green.",
+            "sourceUrl": "https://www.redwoods-golf.com/images/scorecard/Hole_15.jpg",
+            "confidence": "explicit"
+          },
+          {
+            "number": 16,
+            "shape": "dogleg-left",
+            "terrain": [],
+            "hazards": [
+              "creek before green"
+            ],
+            "description": "Left dogleg followed by a creek-crossing approach.",
+            "sourceUrl": "https://www.redwoods-golf.com/images/scorecard/Hole_16.jpg",
+            "confidence": "explicit"
+          },
+          {
+            "number": 17,
+            "shape": "unknown",
+            "terrain": [
+              "slight-uphill"
+            ],
+            "hazards": [
+              "left-side fescue"
+            ],
+            "description": "Uphill par 3; long-left shots feed into fescue.",
+            "sourceUrl": "https://www.redwoods-golf.com/images/scorecard/Hole_17.jpg",
+            "confidence": "explicit"
+          },
+          {
+            "number": 18,
+            "shape": "unknown",
+            "terrain": [
+              "plateau-landing-area"
+            ],
+            "hazards": [
+              "deep front bunker"
+            ],
+            "description": "Plateau second-shot target leaves a level approach.",
+            "sourceUrl": "https://www.redwoods-golf.com/images/scorecard/Hole_18.jpg",
+            "confidence": "explicit"
+          }
+        ],
+        "limitations": "Official hole diagrams provide concise playing notes but no formal shape label on holes marked unknown. Yardages were intentionally omitted."
+      },
+      {
+        "name": "Northlands Golf Course",
+        "overview": "A Les Furber-designed public course carved through coastal rainforest at the foot of Mt. Seymour, with holes framed by old-growth trees.",
+        "features": [
+          "coastal rainforest",
+          "old-growth trees",
+          "Mt. Seymour setting",
+          "scenic vistas"
+        ],
+        "sources": [
+          {
+            "title": "Official course overview",
+            "url": "https://golfnorthlands.com/"
+          },
+          {
+            "title": "Official scorecard PDF",
+            "url": "https://golfnorthlands.com/wp-content/uploads/2022/03/236029_NorthlandsGolf_ScoreCard_PROOF.pdf"
+          },
+          {
+            "title": "Official course and cart rules",
+            "url": "https://golfnorthlands.com/dress-code/"
+          }
+        ],
+        "holes": [
+          {
+            "number": 6,
+            "shape": "unknown",
+            "terrain": [],
+            "hazards": [
+              "penalized area behind green"
+            ],
+            "description": "The official local rule directs play to the nearest drop area behind this green.",
+            "sourceUrl": "https://golfnorthlands.com/wp-content/uploads/2022/03/236029_NorthlandsGolf_ScoreCard_PROOF.pdf",
+            "confidence": "explicit"
+          },
+          {
+            "number": 8,
+            "shape": "unknown",
+            "terrain": [],
+            "hazards": [
+              "penalized area behind green"
+            ],
+            "description": "The official local rule directs play to the nearest drop area behind this green.",
+            "sourceUrl": "https://golfnorthlands.com/wp-content/uploads/2022/03/236029_NorthlandsGolf_ScoreCard_PROOF.pdf",
+            "confidence": "explicit"
+          }
+        ],
+        "limitations": "No official public hole guide or labeled course map was found. The scorecard documents special drop-area rules for holes 6 and 8, but other hole geometry, elevation, and hazards remain unavailable. The official site also notes five holes are always cart-path-only due to terrain without identifying them."
+      },
+      {
+        "name": "Langara Golf Course",
+        "overview": "A walkable classic course with curved, narrow tree-lined fairways and large rolling greens.",
+        "features": [
+          "curved fairways",
+          "tree-lined",
+          "narrow fairways",
+          "rolling greens",
+          "walkable"
+        ],
+        "sources": [
+          {
+            "title": "Official course overview",
+            "url": "https://vancouver.ca/parks-recreation-culture/langara-golf-course.aspx"
+          },
+          {
+            "title": "Official scorecard PDF",
+            "url": "https://vancouver.ca/files/cov/langara-golf-course-scorecard.pdf"
+          }
+        ],
+        "holes": [],
+        "limitations": "The official page provides course-level characteristics and the scorecard provides par and yardage data, but no reliable official hole-by-hole geometry or hazard descriptions were found."
+      },
+      {
+        "name": "Burnaby Mountain Golf Course",
+        "overview": "A classic layout with natural tree-lined fairways and gently rolling terrain.",
+        "features": [
+          "tree-lined",
+          "gentle rolling terrain",
+          "classic layout"
+        ],
+        "sources": [
+          {
+            "title": "Hole-by-hole tour and official course overview",
+            "url": "https://www.golfburnaby.ca/golf/burnaby-mountain"
+          }
+        ],
+        "holes": [
+          {
+            "number": 1,
+            "shape": "unknown",
+            "terrain": [],
+            "hazards": [
+              "narrowing trees"
+            ],
+            "description": "Trees narrow the landing area farther from the tee.",
+            "sourceUrl": "https://www.golfburnaby.ca/golf/burnaby-mountain",
+            "confidence": "explicit"
+          },
+          {
+            "number": 2,
+            "shape": "unknown",
+            "terrain": [
+              "downhill-approach"
+            ],
+            "hazards": [],
+            "description": "Downhill approach with little recovery beyond the green.",
+            "sourceUrl": "https://www.golfburnaby.ca/golf/burnaby-mountain",
+            "confidence": "explicit"
+          },
+          {
+            "number": 3,
+            "shape": "unknown",
+            "terrain": [
+              "downhill-approach-lie"
+            ],
+            "hazards": [
+              "water before green"
+            ],
+            "description": "Water fronts the green after two positioning shots.",
+            "sourceUrl": "https://www.golfburnaby.ca/golf/burnaby-mountain",
+            "confidence": "explicit"
+          },
+          {
+            "number": 4,
+            "shape": "unknown",
+            "terrain": [
+              "uphill"
+            ],
+            "hazards": [],
+            "description": "Uphill par 3 with a strongly sloped green.",
+            "sourceUrl": "https://www.golfburnaby.ca/golf/burnaby-mountain",
+            "confidence": "explicit"
+          },
+          {
+            "number": 5,
+            "shape": "unknown",
+            "terrain": [
+              "downhill-tee-shot"
+            ],
+            "hazards": [
+              "trees left"
+            ],
+            "description": "Downhill drive; left trees can block the approach.",
+            "sourceUrl": "https://www.golfburnaby.ca/golf/burnaby-mountain",
+            "confidence": "explicit"
+          },
+          {
+            "number": 6,
+            "shape": "unknown",
+            "terrain": [
+              "uphill"
+            ],
+            "hazards": [],
+            "description": "Uphill par 3 that commonly plays longer.",
+            "sourceUrl": "https://www.golfburnaby.ca/golf/burnaby-mountain",
+            "confidence": "explicit"
+          },
+          {
+            "number": 7,
+            "shape": "unknown",
+            "terrain": [],
+            "hazards": [
+              "out-of-bounds right"
+            ],
+            "description": "Scoring chance with out-of-bounds close on the right.",
+            "sourceUrl": "https://www.golfburnaby.ca/golf/burnaby-mountain",
+            "confidence": "explicit"
+          },
+          {
+            "number": 8,
+            "shape": "unknown",
+            "terrain": [],
+            "hazards": [
+              "creek right",
+              "trees left"
+            ],
+            "description": "Creek borders the right while trees constrain the left.",
+            "sourceUrl": "https://www.golfburnaby.ca/golf/burnaby-mountain",
+            "confidence": "explicit"
+          },
+          {
+            "number": 9,
+            "shape": "unknown",
+            "terrain": [],
+            "hazards": [],
+            "description": "The main defense is a green sloping away.",
+            "sourceUrl": "https://www.golfburnaby.ca/golf/burnaby-mountain",
+            "confidence": "explicit"
+          },
+          {
+            "number": 10,
+            "shape": "unknown",
+            "terrain": [],
+            "hazards": [],
+            "description": "Long par 4 requiring two strong shots.",
+            "sourceUrl": "https://www.golfburnaby.ca/golf/burnaby-mountain",
+            "confidence": "explicit"
+          },
+          {
+            "number": 11,
+            "shape": "unknown",
+            "terrain": [],
+            "hazards": [
+              "out-of-bounds left"
+            ],
+            "description": "Wide fairway and open green, with out-of-bounds left.",
+            "sourceUrl": "https://www.golfburnaby.ca/golf/burnaby-mountain",
+            "confidence": "explicit"
+          },
+          {
+            "number": 12,
+            "shape": "unknown",
+            "terrain": [
+              "elevated-green"
+            ],
+            "hazards": [],
+            "description": "Straight tee shot sets up an elevated green.",
+            "sourceUrl": "https://www.golfburnaby.ca/golf/burnaby-mountain",
+            "confidence": "explicit"
+          },
+          {
+            "number": 13,
+            "shape": "unknown",
+            "terrain": [],
+            "hazards": [
+              "trees left",
+              "bunker right"
+            ],
+            "description": "Misses face trees left or a right-side bunker.",
+            "sourceUrl": "https://www.golfburnaby.ca/golf/burnaby-mountain",
+            "confidence": "explicit"
+          },
+          {
+            "number": 14,
+            "shape": "unknown",
+            "terrain": [
+              "uphill"
+            ],
+            "hazards": [],
+            "description": "Long uphill dogleg with a severely sloped green.",
+            "sourceUrl": "https://www.golfburnaby.ca/golf/burnaby-mountain",
+            "confidence": "explicit"
+          },
+          {
+            "number": 15,
+            "shape": "unknown",
+            "terrain": [
+              "uphill"
+            ],
+            "hazards": [],
+            "description": "Uphill par 3 with pronounced green slope.",
+            "sourceUrl": "https://www.golfburnaby.ca/golf/burnaby-mountain",
+            "confidence": "explicit"
+          },
+          {
+            "number": 16,
+            "shape": "dogleg-right",
+            "terrain": [
+              "downhill"
+            ],
+            "hazards": [
+              "creek crossing fairway",
+              "creek right of green",
+              "out-of-bounds beyond fairway"
+            ],
+            "description": "Downhill right dogleg crossed and guarded by a creek.",
+            "sourceUrl": "https://www.golfburnaby.ca/golf/burnaby-mountain",
+            "confidence": "explicit"
+          },
+          {
+            "number": 17,
+            "shape": "unknown",
+            "terrain": [],
+            "hazards": [],
+            "description": "Straight drive leaves a short approach to a sloped green.",
+            "sourceUrl": "https://www.golfburnaby.ca/golf/burnaby-mountain",
+            "confidence": "explicit"
+          },
+          {
+            "number": 18,
+            "shape": "unknown",
+            "terrain": [],
+            "hazards": [],
+            "description": "A short 90-degree dogleg demanding precise corner placement.",
+            "sourceUrl": "https://www.golfburnaby.ca/golf/burnaby-mountain",
+            "confidence": "explicit"
+          }
+        ],
+        "limitations": "The official guide identifies doglegs on holes 14 and 18 but does not state their turning direction, so shape remains unknown. Yardages were omitted."
+      },
+      {
+        "name": "Fraserview Golf Course",
+        "overview": "A traditional course with topographical changes along majestic tree-lined fairways overlooking the Fraser River.",
+        "features": [
+          "traditional-style",
+          "tree-lined",
+          "topographical changes",
+          "Fraser River views"
+        ],
+        "sources": [
+          {
+            "title": "Official course overview",
+            "url": "https://vancouver.ca/parks-recreation-culture/fraserview-golf-course.aspx"
+          },
+          {
+            "title": "Official scorecard PDF",
+            "url": "https://vancouver.ca/files/cov/fraserview-golf-course-scorecard.pdf"
+          }
+        ],
+        "holes": [],
+        "limitations": "The official overview confirms terrain and tree-lined character, while the official scorecard supplies par and yardages. No reliable official hole-by-hole geometry or hazard descriptions were found."
+      },
+      {
+        "name": "Riverway Golf Course",
+        "overview": "A links-style course with fescue-covered mounds, extensive bunkering, and strategically placed water.",
+        "features": [
+          "links-style",
+          "fescue mounds",
+          "bunkers",
+          "water hazards",
+          "wind exposure"
+        ],
+        "sources": [
+          {
+            "title": "Hole-by-hole tour and official course overview",
+            "url": "https://www.golfburnaby.ca/golf/riverway"
+          }
+        ],
+        "holes": [
+          {
+            "number": 1,
+            "shape": "unknown",
+            "terrain": [],
+            "hazards": [
+              "hidden back-left bunker"
+            ],
+            "description": "Wind-exposed opener with a hidden bunker behind the green.",
+            "sourceUrl": "https://www.golfburnaby.ca/golf/riverway",
+            "confidence": "explicit"
+          },
+          {
+            "number": 2,
+            "shape": "unknown",
+            "terrain": [],
+            "hazards": [],
+            "description": "Corner-cutting option trades accuracy for a shorter approach.",
+            "sourceUrl": "https://www.golfburnaby.ca/golf/riverway",
+            "confidence": "explicit"
+          },
+          {
+            "number": 3,
+            "shape": "unknown",
+            "terrain": [],
+            "hazards": [
+              "creek crossing fairway"
+            ],
+            "description": "A creek crosses the fairway near the green.",
+            "sourceUrl": "https://www.golfburnaby.ca/golf/riverway",
+            "confidence": "explicit"
+          },
+          {
+            "number": 4,
+            "shape": "unknown",
+            "terrain": [],
+            "hazards": [
+              "out-of-bounds left"
+            ],
+            "description": "Long par 4 with out-of-bounds along the left.",
+            "sourceUrl": "https://www.golfburnaby.ca/golf/riverway",
+            "confidence": "explicit"
+          },
+          {
+            "number": 5,
+            "shape": "unknown",
+            "terrain": [],
+            "hazards": [
+              "fairway bunkers"
+            ],
+            "description": "Multiple fairway bunkers shape the lay-up decision.",
+            "sourceUrl": "https://www.golfburnaby.ca/golf/riverway",
+            "confidence": "explicit"
+          },
+          {
+            "number": 6,
+            "shape": "unknown",
+            "terrain": [],
+            "hazards": [
+              "water",
+              "sand"
+            ],
+            "description": "All-carry par 3 to a two-level green.",
+            "sourceUrl": "https://www.golfburnaby.ca/golf/riverway",
+            "confidence": "explicit"
+          },
+          {
+            "number": 7,
+            "shape": "unknown",
+            "terrain": [],
+            "hazards": [
+              "left fairway bunker",
+              "water near green"
+            ],
+            "description": "Positioning hole with water tight to the green.",
+            "sourceUrl": "https://www.golfburnaby.ca/golf/riverway",
+            "confidence": "explicit"
+          },
+          {
+            "number": 8,
+            "shape": "unknown",
+            "terrain": [],
+            "hazards": [
+              "front bunker"
+            ],
+            "description": "Front bunker protects a shallow green.",
+            "sourceUrl": "https://www.golfburnaby.ca/golf/riverway",
+            "confidence": "explicit"
+          },
+          {
+            "number": 9,
+            "shape": "unknown",
+            "terrain": [],
+            "hazards": [
+              "narrowing fairway"
+            ],
+            "description": "Fairway narrows sharply before a very deep green.",
+            "sourceUrl": "https://www.golfburnaby.ca/golf/riverway",
+            "confidence": "explicit"
+          },
+          {
+            "number": 10,
+            "shape": "unknown",
+            "terrain": [],
+            "hazards": [],
+            "description": "Approach placement matters on a tiered green.",
+            "sourceUrl": "https://www.golfburnaby.ca/golf/riverway",
+            "confidence": "explicit"
+          },
+          {
+            "number": 11,
+            "shape": "unknown",
+            "terrain": [],
+            "hazards": [
+              "trees left"
+            ],
+            "description": "Trees mask crosswind beside an angled green.",
+            "sourceUrl": "https://www.golfburnaby.ca/golf/riverway",
+            "confidence": "explicit"
+          },
+          {
+            "number": 12,
+            "shape": "unknown",
+            "terrain": [],
+            "hazards": [
+              "out-of-bounds left",
+              "deep right fairway bunkers"
+            ],
+            "description": "Driving corridor is bounded by penalties on both sides.",
+            "sourceUrl": "https://www.golfburnaby.ca/golf/riverway",
+            "confidence": "explicit"
+          },
+          {
+            "number": 13,
+            "shape": "unknown",
+            "terrain": [],
+            "hazards": [
+              "fairway bunkers"
+            ],
+            "description": "Bunkers precede a green divided into three sections.",
+            "sourceUrl": "https://www.golfburnaby.ca/golf/riverway",
+            "confidence": "explicit"
+          },
+          {
+            "number": 14,
+            "shape": "unknown",
+            "terrain": [],
+            "hazards": [],
+            "description": "Risky corner cut leads to a steeply sloped green.",
+            "sourceUrl": "https://www.golfburnaby.ca/golf/riverway",
+            "confidence": "explicit"
+          },
+          {
+            "number": 15,
+            "shape": "unknown",
+            "terrain": [],
+            "hazards": [
+              "forest near fringe"
+            ],
+            "description": "Forest is close and the rear green slopes away.",
+            "sourceUrl": "https://www.golfburnaby.ca/golf/riverway",
+            "confidence": "explicit"
+          },
+          {
+            "number": 16,
+            "shape": "dogleg-right",
+            "terrain": [],
+            "hazards": [
+              "large right mound"
+            ],
+            "description": "Fairway angles right toward an undulating green.",
+            "sourceUrl": "https://www.golfburnaby.ca/golf/riverway",
+            "confidence": "explicit"
+          },
+          {
+            "number": 17,
+            "shape": "unknown",
+            "terrain": [],
+            "hazards": [
+              "creek",
+              "greenside bunkers"
+            ],
+            "description": "Approach must avoid a creek and greenside bunkers.",
+            "sourceUrl": "https://www.golfburnaby.ca/golf/riverway",
+            "confidence": "explicit"
+          },
+          {
+            "number": 18,
+            "shape": "unknown",
+            "terrain": [
+              "crest",
+              "elevated-landing-area"
+            ],
+            "hazards": [],
+            "description": "Drive crosses a crest; lay-up precedes a deep green.",
+            "sourceUrl": "https://www.golfburnaby.ca/golf/riverway",
+            "confidence": "explicit"
+          }
+        ],
+        "limitations": "The official guide mentions corner-cutting on holes 2 and 14 without stating turn direction, so those shapes remain unknown. Yardages were omitted."
+      },
+      {
+        "name": "Royalwood Golf & RV Resort",
+        "overview": "An 18-hole links-style course occupying 130 acres in the Fraser Valley.",
+        "features": [
+          "links-style",
+          "Fraser Valley setting",
+          "18 holes"
+        ],
+        "sources": [
+          {
+            "title": "Official course overview",
+            "url": "https://royalwoodgolf.com/"
+          },
+          {
+            "title": "Official course information",
+            "url": "https://royalwoodgolf.com/golf/"
+          },
+          {
+            "title": "Official scorecard image",
+            "url": "https://royalwoodgolf.com/wp-content/uploads/2024/02/IMG_20240221_0001-2048x800.jpg"
+          },
+          {
+            "title": "Official course map",
+            "url": "https://royalwoodgolf.com/wp-content/uploads/2022/01/Maplayoutlarge.jpg"
+          }
+        ],
+        "holes": [],
+        "limitations": "The official site provides a course-level description and scorecard access, but its public hole pages do not provide dependable text descriptions; hole geometry is unavailable."
+      }
+    ]
+  }
+}

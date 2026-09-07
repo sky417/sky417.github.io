@@ -1,0 +1,118 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { analyze, validateRounds, describeHoles, rollingAverage, courseHoleGroups } from '../../golf/analysis.mjs';
+
+const makeRound = (overrides = {}) => ({
+  date: '2026-09-06', course: 'Test Course', tee: 'White', score: 90, putts: 36, gir: 0, fir: null, scoreValue: null, adjustedGross: null,
+  holes: Array.from({ length: 18 }, (_, index) => ({ number: index + 1, par: 4, strokes: 5, putts: 2, yards: null, gir: null, teeAccuracy: null })),
+  ...overrides,
+});
+
+test('validates gross strokes, putts, and complete hole arrays independently', () => {
+  assert.equal(validateRounds([makeRound()]).length, 1);
+  assert.throws(() => validateRounds([makeRound({ score: 89 })]), /gross score/);
+  assert.throws(() => validateRounds([makeRound({ putts: 35 })]), /round putts/);
+  assert.throws(() => validateRounds([makeRound({ holes: [] })]), /incomplete hole/);
+  assert.throws(() => validateRounds([makeRound({ gir: undefined })]), /gir/);
+});
+
+test('summary-only rounds do not invent hole detail or turn missing GIR into zero', () => {
+  const report = analyze([makeRound({ holes: null, gir: null }), makeRound({ date: '2026-09-05', gir: 0 })]);
+  assert.equal(report.summary.count, 2);
+  assert.equal(report.summary.detailed, 1);
+  assert.equal(report.summary.gir, 0);
+  assert.equal(report.summary.girCount, 1);
+  assert.equal(report.allHoles.length, 18);
+  assert.throws(() => validateRounds([makeRound({ holes: null, adjustedGross: '<img>' })]), /adjusted gross/);
+});
+
+test('stages compare strokes relative to par using equal six-hole samples', () => {
+  const round = makeRound();
+  round.holes[0].par = 5;
+  round.holes[0].strokes = 6;
+  round.score++;
+  const report = analyze([round]);
+  for (const stage of report.stages) {
+    assert.equal(stage.count, 6);
+    assert.equal(stage.averageOverPar, 1);
+  }
+});
+
+test('counts four-putts as three-plus holes but two excess putts', () => {
+  const stats = describeHoles([{ par: 4, strokes: 7, putts: 4 }, { par: 3, strokes: 3, putts: 1 }]);
+  assert.equal(stats.threePlusCount, 1);
+  assert.equal(stats.excessPutts, 2);
+  assert.equal(stats.aboveDouble, 1);
+  assert.equal(stats.distribution.triplePlus, 1);
+});
+
+test('rolling average waits for a full window and does not mutate chronological data', () => {
+  const rows = [{ date: 'a', score: 90 }, { date: 'b', score: 99 }, { date: 'c', score: 96 }];
+  assert.deepEqual(rollingAverage(rows, 'score').map((point) => point.value), [null, null, 95]);
+  assert.throws(() => rollingAverage(rows, 'score', 0), /positive/);
+});
+
+test('keeps repeated hole identities separate by course and tee', () => {
+  const report = analyze([makeRound(), makeRound({ date: '2026-09-05', tee: 'Blue' }), makeRound({ date: '2026-09-04', course: 'Other Course' })]);
+  assert.equal(report.repeatedHoles.length, 54);
+  assert.ok(report.repeatedHoles.every((hole) => hole.rounds === 1));
+});
+
+test('same-day rounds with different tees retain independent identities and direction coverage', () => {
+  const first = makeRound();
+  const second = makeRound({ tee: 'Blue' });
+  first.holes[0].teeAccuracy = 'hit';
+  second.holes[0].teeAccuracy = 'left';
+  const report = analyze([first, second]);
+  assert.equal(report.summary.count, 2);
+  assert.equal(report.directionCoverage.rounds, 2);
+  assert.equal(report.directionCoverage.holes, 2);
+});
+
+test('par category labels and repeated-hole pars are not overwritten by aggregate par sums', () => {
+  const report = analyze([makeRound(), makeRound({ date: '2026-09-05' })]);
+  assert.deepEqual(report.parTypes.map((group) => group.par), [3, 4, 5]);
+  assert.ok(report.repeatedHoles.every((hole) => hole.par === 4 && hole.rounds === 2));
+  assert.equal(report.summary.firstHalf.par, 72);
+});
+
+test('shape analysis excludes unknown geometry and map-only inference', () => {
+  const report = analyze([makeRound()]);
+  const research = { courses: [{ name: 'Test Course', holes: [
+    { number: 1, shape: 'dogleg-left', confidence: 'explicit' },
+    { number: 2, shape: 'dogleg-right', confidence: 'map-inference' },
+  ] }] };
+  const groups = courseHoleGroups(report, research);
+  assert.equal(groups.length, 1);
+  assert.equal(groups[0].count, 1);
+  assert.equal(groups[0].uniqueHoles, 1);
+});
+
+test('zero-detail filters have honest null rates and no divide-by-zero', () => {
+  const report = analyze([makeRound({ holes: null })]);
+  assert.equal(report.holeStats.threePlusRate, null);
+  assert.equal(report.holeStats.averageOverPar, null);
+  assert.equal(report.summary.detailed, 0);
+  assert.equal(report.stages[0].count, 0);
+});
+
+test('rejects impossible calendar dates, impossible round putts, and unmapped direction codes', () => {
+  assert.throws(() => validateRounds([makeRound({ date: '2026-02-30' })]), /Invalid round date/);
+  assert.throws(() => validateRounds([makeRound({ holes: null, putts: 100 })]), /round putts exceed/);
+  const round = makeRound();
+  round.holes[0].teeAccuracy = 'arrow';
+  assert.throws(() => validateRounds([round]), /unsupported tee accuracy/);
+});
+
+test('September 6 uses gross 109, not adjusted gross 108, for performance analysis', () => {
+  const pars = [4,4,3,5,4,4,3,4,4,4,4,3,4,5,4,4,3,5];
+  const strokes = [6,5,5,8,6,6,4,5,6,6,6,5,7,7,6,9,5,7];
+  const putts = [3,2,2,2,2,2,2,3,3,2,2,3,1,2,3,2,2,2];
+  const round = makeRound({ score: 109, putts: 40, adjustedGross: 108 });
+  round.holes = round.holes.map((hole, index) => ({ ...hole, par: pars[index], strokes: strokes[index], putts: putts[index] }));
+  const report = analyze([round]);
+  assert.equal(report.summary.average, 109);
+  assert.equal(report.summary.firstHalf.strokes, 51);
+  assert.equal(report.summary.secondHalf.strokes, 58);
+  assert.deepEqual(report.holeStats.distribution, { eagleOrBetter: 0, birdie: 0, par: 0, bogey: 3, double: 12, triplePlus: 3 });
+});
