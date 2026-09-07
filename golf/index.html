@@ -19,23 +19,16 @@
         </span>
         <span>ROUND <b>/</b> 2026</span>
       </a>
-      <nav class="section-nav" aria-label="Report sections">
-        <a href="#overview">Overview</a>
-        <a href="#trend">Trend</a>
-        <a href="#holes">Holes</a>
-        <a href="#putting">Putting</a>
-        <a href="#course-dna">Course DNA</a>
-        <a href="#priorities">Priorities</a>
-      </nav>
+      <a class="button topbar__plan" href="#priorities">Open game plan <span aria-hidden="true">&rarr;</span></a>
     </div>
   </header>
 
-  <main id="main">
+  <main id="main" tabindex="-1">
     <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="hero__copy">
         <p class="eyebrow">2026 season review</p>
-        <h1 id="hero-title">Your game,<br><em>in focus.</em></h1>
-        <p class="hero__lede">A clear look at scoring, round rhythm, putting, and the course patterns the records can actually support.</p>
+        <h1 id="hero-title">Your game, <em>in focus.</em></h1>
+        <p class="hero__lede">Explore your season one view at a time. Then take a data-led plan to your next round.</p>
         <div class="hero__meta" id="hero-meta" aria-live="polite">
           <span class="skeleton skeleton--line"></span>
         </div>
@@ -60,7 +53,7 @@
     <div class="filter-dock" id="filter-dock">
       <div>
         <label for="course-filter">Course lens</label>
-        <p id="filter-description">Every section responds to this filter.</p>
+        <p id="filter-description">Every tab and suggestion responds to this filter.</p>
       </div>
       <div class="filter-dock__control">
         <select id="course-filter" aria-describedby="filter-description" disabled>
@@ -81,7 +74,17 @@
     </div>
 
     <div id="report" hidden>
-      <section class="report-section" id="overview" aria-labelledby="overview-title">
+      <div class="report-tabs" role="tablist" aria-label="Report views">
+        <button type="button" role="tab" id="tab-overview" aria-controls="overview" aria-selected="true">Overview</button>
+        <button type="button" role="tab" id="tab-trend" aria-controls="trend" aria-selected="false" tabindex="-1">Trends</button>
+        <button type="button" role="tab" id="tab-rhythm" aria-controls="rhythm" aria-selected="false" tabindex="-1">Round rhythm</button>
+        <button type="button" role="tab" id="tab-holes" aria-controls="holes" aria-selected="false" tabindex="-1">Scorecards</button>
+        <button type="button" role="tab" id="tab-putting" aria-controls="putting" aria-selected="false" tabindex="-1">Putting</button>
+        <button type="button" role="tab" id="tab-course-dna" aria-controls="course-dna" aria-selected="false" tabindex="-1">Course DNA</button>
+        <button type="button" role="tab" id="tab-priorities" aria-controls="priorities" aria-selected="false" tabindex="-1">Game plan</button>
+        <button type="button" role="tab" id="tab-methodology" aria-controls="methodology" aria-selected="false" tabindex="-1">Sources &amp; data</button>
+      </div>
+      <section class="report-section" id="overview" role="tabpanel" aria-labelledby="tab-overview" tabindex="0">
         <header class="section-heading">
           <div>
             <p class="eyebrow">01 / Overview</p>
@@ -92,7 +95,7 @@
         <div id="overview-content"></div>
       </section>
 
-      <section class="report-section report-section--tint" id="trend" aria-labelledby="trend-title">
+      <section class="report-section report-section--tint" id="trend" role="tabpanel" aria-labelledby="tab-trend" tabindex="0" hidden>
         <header class="section-heading">
           <div>
             <p class="eyebrow">02 / Season trend</p>
@@ -103,7 +106,7 @@
         <div id="trend-content"></div>
       </section>
 
-      <section class="report-section" id="rhythm" aria-labelledby="rhythm-title">
+      <section class="report-section" id="rhythm" role="tabpanel" aria-labelledby="tab-rhythm" tabindex="0" hidden>
         <header class="section-heading">
           <div>
             <p class="eyebrow">03 / Round rhythm</p>
@@ -114,7 +117,7 @@
         <div id="rhythm-content"></div>
       </section>
 
-      <section class="report-section report-section--tint" id="holes" aria-labelledby="holes-title">
+      <section class="report-section report-section--tint" id="holes" role="tabpanel" aria-labelledby="tab-holes" tabindex="0" hidden>
         <header class="section-heading">
           <div>
             <p class="eyebrow">04 / Hole patterns</p>
@@ -125,7 +128,7 @@
         <div id="holes-content"></div>
       </section>
 
-      <section class="report-section" id="putting" aria-labelledby="putting-title">
+      <section class="report-section" id="putting" role="tabpanel" aria-labelledby="tab-putting" tabindex="0" hidden>
         <header class="section-heading">
           <div>
             <p class="eyebrow">05 / Putting</p>
@@ -136,7 +139,7 @@
         <div id="putting-content"></div>
       </section>
 
-      <section class="report-section report-section--forest" id="course-dna" aria-labelledby="dna-title">
+      <section class="report-section report-section--forest" id="course-dna" role="tabpanel" aria-labelledby="tab-course-dna" tabindex="0" hidden>
         <header class="section-heading">
           <div>
             <p class="eyebrow">06 / Course DNA</p>
@@ -147,18 +150,18 @@
         <div id="dna-content"></div>
       </section>
 
-      <section class="report-section" id="priorities" aria-labelledby="priorities-title">
+      <section class="report-section" id="priorities" role="tabpanel" aria-labelledby="tab-priorities" tabindex="0" hidden>
         <header class="section-heading">
           <div>
-            <p class="eyebrow">07 / Next-round experiments</p>
-            <h2 id="priorities-title">Turn observations into tests</h2>
+            <p class="eyebrow">07 / Your improvement plan</p>
+            <h2 id="priorities-title">Fewer big numbers. A clearer plan.</h2>
           </div>
-          <p>These are measurable experiments, not forecasts. Hypothetical scoring scenarios are independent and should not be added together.</p>
+          <p>Personal baselines, practical drills, and targets for your next three rounds. Suggestions are experiments, not diagnoses or promised strokes saved.</p>
         </header>
         <div id="priorities-content"></div>
       </section>
 
-      <section class="report-section report-section--compact" id="methodology" aria-labelledby="method-title">
+      <section class="report-section report-section--compact" id="methodology" role="tabpanel" aria-labelledby="tab-methodology" tabindex="0" hidden>
         <header class="section-heading">
           <div>
             <p class="eyebrow">08 / Notes</p>

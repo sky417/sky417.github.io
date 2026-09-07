@@ -1,8 +1,9 @@
-import { analyze, rollingAverage, courseHoleGroups, roundIdentity } from './analysis.mjs';
+import { analyze, rollingAverage, courseHoleGroups, roundIdentity, improvementEvidence } from './analysis.mjs';
 
 const dom = {
   status: document.querySelector('#status'),
   report: document.querySelector('#report'),
+  tabs: document.querySelector('[role="tablist"]'),
   heroMeta: document.querySelector('#hero-meta'),
   courseFilter: document.querySelector('#course-filter'),
   resetFilter: document.querySelector('#reset-filter'),
@@ -24,6 +25,7 @@ const state = {
   selectedRoundKey: null,
   dnaCourse: null,
   dnaHole: 1,
+  activeTab: 'overview',
 };
 
 const escapeHtml = (value) => String(value ?? '')
@@ -69,6 +71,14 @@ const lostStrokesGuide = {
   url: 'https://thegrint.com/range/post/thegrint-golf-scorecard-penalties',
   title: 'TheGrint lost-strokes estimate guide',
 };
+const puttingPracticeGuide = {
+  url: 'https://www.pga.com/story/golf-tips-the-best-putting-drills-to-improve-your-stroke',
+  title: 'PGA: putting practice',
+};
+const courseManagementGuide = {
+  url: 'https://www.pga.com/story/lower-your-scores-by-developing-a-purposeful-game-plan',
+  title: 'PGA: course-management planning',
+};
 
 function safeUrl(value) {
   try {
@@ -111,6 +121,41 @@ function currentAnalysis() {
 
 function setHtml(node, html) {
   node.innerHTML = html;
+}
+
+function activateTab(id, { updateHistory = false, focus = false, reveal = false } = {}) {
+  const tabs = [...dom.tabs.querySelectorAll('[role="tab"]')];
+  const selected = tabs.find((tab) => tab.getAttribute('aria-controls') === id);
+  if (!selected) throw new Error(`Unknown report tab: ${id}`);
+  const previousPanel = document.getElementById(state.activeTab);
+  const moveFocus = focus || (state.activeTab !== id && previousPanel.contains(document.activeElement));
+  state.activeTab = id;
+  for (const tab of tabs) {
+    const active = tab === selected;
+    tab.setAttribute('aria-selected', String(active));
+    tab.tabIndex = active ? 0 : -1;
+    document.getElementById(tab.getAttribute('aria-controls')).hidden = !active;
+  }
+  document.title = `${selected.textContent.trim()} | Round / 2026`;
+  if (updateHistory && location.hash !== `#${id}`) history.pushState(null, '', `#${id}`);
+  if (moveFocus) selected.focus({ preventScroll: true });
+  if (reveal) {
+    dom.report.scrollIntoView({ block: 'start', behavior: 'instant' });
+    selected.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: 'instant' });
+  }
+}
+
+function syncTabFromHash({ reveal = true } = {}) {
+  const id = location.hash.slice(1);
+  const target = document.getElementById(id);
+  const panel = target?.closest('[role="tabpanel"]');
+  if (panel) {
+    activateTab(panel.id, { reveal, focus: reveal });
+    if (target !== panel && reveal) target.scrollIntoView({ block: 'center', behavior: 'instant' });
+  } else if (!id || id === 'top') {
+    activateTab('overview');
+    if (reveal) window.scrollTo({ top: 0, behavior: 'instant' });
+  }
 }
 
 function emptyState(title, message) {
@@ -255,6 +300,13 @@ function renderOverview(report) {
       <strong>Detail coverage</strong>
       <div class="coverage-track" aria-hidden="true"><span style="width:${Math.max(0, Math.min(100, coverage))}%"></span></div>
       <p>${summary.detailed} score/putt grids / ${summary.count} total rounds. Hole analysis excludes the other ${summary.count - summary.detailed}; supplementary fields may have different coverage and are never treated as zero.</p>
+    </div>
+    <div class="plan-callout">
+      <div>
+        <strong>Your next round starts here.</strong>
+        <p>See personal baselines, practice drills, and a three-round improvement experiment.</p>
+      </div>
+      <a class="button" href="#priorities">See your game plan &rarr;</a>
     </div>
   `);
 }
@@ -1064,48 +1116,147 @@ function renderDna(report) {
 }
 
 function renderPriorities(report) {
-  const detailedRounds = report.summary.detailed;
-  const capDouble = report.holeStats.aboveDouble;
-  const twoPutt = report.holeStats.excessPutts;
-  const tripleCount = report.holeStats.distribution.triplePlus;
   const holeCount = report.holeStats.count;
-  const recordedEventCodes = report.allHoles.filter((hole) => hole.penaltyCodes != null && hole.penaltyCodes !== '');
-  const detailMessage = holeCount
-    ? `${tripleCount} triple-or-worse holes and ${report.holeStats.threePlusCount} three-plus-putt holes appear across ${holeCount} recorded holes.`
-    : 'There are no detailed holes in the active filter, so no hole-level scenarios can be calculated.';
+  if (!holeCount) {
+    setHtml(dom.priorities, emptyState('Hole detail is needed for a personal plan', 'Round totals alone cannot identify three-putts, trouble holes, or tee-shot patterns. Select a course with captured scorecards.'));
+    return;
+  }
+  const evidence = improvementEvidence(report);
+  const { tee, greens, events } = evidence;
+  const tripleCount = report.holeStats.distribution.triplePlus;
+  const par5 = report.parTypes.find((group) => group.par === 5);
+  const longPar4 = report.lengthBands.at(-1);
+  const eventEvidence = events.observed
+    ? `${events.withCodes.count} of ${events.observed} inspected holes have event codes; ${events.dropHoles} have a D (drop) record. ${events.withCodes.distribution.triplePlus} event-marked holes were triple-or-worse. These are overlaps, not a count of penalty strokes or proof of cause.`
+    : 'No event cells were captured for this selection; do not assume that no events occurred.';
+  const teeEvidence = tee.observed
+    ? `${tee.hits}/${tee.observed} observed par-4/5 tee shots hit the fairway (${percent(tee.rate)}). There were ${tee.left} left and ${tee.right} right misses. Coverage: ${tee.observed}/${tee.eligible} eligible holes; par 3s and unknown outcomes are excluded.`
+    : 'No known par-4/5 tee outcomes are available in this selection. Collect aim, club, and outcome before choosing a strategy.';
+  const approachEvidence = greens.observed
+    ? `${greens.hits}/${greens.observed} observed holes reached GIR (${percent(greens.rate)}); coverage ${greens.observed}/${holeCount}. Missed GIR can start with tee trouble, not just an approach error.`
+    : 'Per-hole GIR is unavailable here. Do not infer an approach weakness from total score alone.';
+  const longHoleEvidence = [
+    par5.count ? `Par 5s: ${par5.distribution.triplePlus}/${par5.count} triple-or-worse (${percent(par5.triplePlusRate)}).` : '',
+    longPar4.count ? `400+ yard par 4s: ${formatOverPar(longPar4.averageOverPar, 2)} per hole across ${longPar4.count} observations.` : '',
+  ].filter(Boolean).join(' ');
+  const cards = [
+    {
+      id: 'trouble',
+      title: tripleCount ? 'Keep trouble holes under control' : 'Protect your low-error record',
+      metric: `${number(evidence.triples.baseline)} per 18`,
+      evidence: `${tripleCount}/${holeCount} holes were triple-or-worse (${percent(report.holeStats.triplePlusRate)}). ${eventEvidence}`,
+      action: 'After trouble, favor a clear landing area over a narrow recovery. Pick a club and route you have practiced; make the next shot playable rather than trying to win back the previous stroke.',
+      practice: 'Spend five minutes reviewing your largest scores. Note the first decision you would change and whether the event came from the tee, an approach, or a recovery.',
+      target: `Trial target: at most ${evidence.triples.target} triple-or-worse holes per 18 over your next three comparable rounds. Keep recording actual gross scores; this is not a scoring cap.`,
+      guide: courseManagementGuide,
+    },
+    {
+      id: 'putting',
+      title: report.holeStats.threePlusCount ? 'Work on pace and the next putt' : 'Maintain your two-putt habit',
+      metric: `${number(evidence.putting.baseline)} per 18`,
+      evidence: `${report.holeStats.threePlusCount}/${holeCount} holes took three or more putts (${percent(report.holeStats.threePlusRate)}). This flags a practice opportunity, but without starting distances it does not diagnose speed, read, or stroke.`,
+      action: 'On longer putts, prioritize a manageable next putt. Record first-putt distance and the distance left after it, not just total putts.',
+      practice: 'Use 15 minutes to alternate 20-, 30-, and 40-foot putts toward a three-foot finishing zone. Then spend five minutes putting from four positions three feet around a hole. Log finish distances and makes.',
+      target: `Trial target: at most ${evidence.putting.target} three-plus-putt holes per 18 across the next three comparable rounds. Compare rounds with similar first-putt distances.`,
+      guide: puttingPracticeGuide,
+    },
+    {
+      id: 'tee',
+      title: tee.left && tee.right ? 'Plan for misses on both sides' : 'Map your tee-shot pattern',
+      metric: percent(tee.rate),
+      evidence: teeEvidence,
+      action: 'Choose a landing area with room for your observed spread. Do not automatically aim left or stop hitting driver: outcome arrows do not identify shot curvature, aim, or which club produced the miss.',
+      practice: 'Spend 20 minutes comparing ten shots with your usual tee club and ten with a trusted alternative toward the same corridor. Record carry and both sides of the spread; retain distance as well as accuracy in the decision.',
+      target: 'Next three rounds: record club, intended target, and outcome for every par-4/5 tee shot. Compare fairway hits and the remaining approach, rather than assuming the shorter club is better.',
+      guide: courseManagementGuide,
+    },
+    {
+      id: 'approach',
+      title: 'Build a safer route to the green',
+      metric: percent(greens.rate),
+      evidence: `${approachEvidence} ${longHoleEvidence}`,
+      action: 'Use a generous green target away from trouble. When your normal carry cannot cover a hazard comfortably, plan a lay-up instead of forcing the green. Match the decision to the lie and your measured carry.',
+      practice: 'Spend 15 minutes rotating three approach distances you commonly face. Record carry, lie, and miss direction. Build a usable carry range, not a single best-shot number.',
+      target: 'Next three rounds: log the approach distance, lie, and target on long par 4s and par 5s. Compare GIR and triple-or-worse frequency at the same course and tee.',
+      guide: courseManagementGuide,
+    },
+  ];
+  const stages = report.stages.map((stage) => `${stage.name} ${formatOverPar(stage.averageOverPar, 2)}`).join(' / ');
+  const par3 = report.parTypes.find((group) => group.par === 3);
   setHtml(dom.priorities, `
-    <div class="scenario-grid">
-      <article class="scenario-card">
-        <span class="scenario-card__label">Independent what-if · cap at double bogey</span>
-        <strong>${holeCount ? `−${capDouble}` : '—'}</strong>
-        <p>${holeCount ? `${capDouble} strokes sit above double bogey across ${plural(detailedRounds, 'detailed round')}. This mathematical cap is not a forecast.` : 'Requires detailed scorecards.'}</p>
-      </article>
-      <article class="scenario-card">
-        <span class="scenario-card__label">Independent what-if · maximum two putts</span>
-        <strong>${holeCount ? `−${twoPutt}` : '—'}</strong>
-        <p>${holeCount ? `${twoPutt} putts were recorded above two per hole. This is descriptive and does not imply every one was preventable.` : 'Requires detailed scorecards.'}</p>
-      </article>
+    <div class="plan-intro">
+      <div>
+        <strong>Start with one on-course decision and one putting drill.</strong>
+        <p>Based on ${report.summary.detailed} detailed rounds / ${holeCount} holes${state.course !== 'all' ? ` at ${escapeHtml(state.course)}` : ' across the season'}. Keep the other ideas as supporting work, not four simultaneous swing changes.</p>
+      </div>
+      <span class="meta-chip">Next 3 comparable rounds</span>
     </div>
-    <p class="note">${escapeHtml(detailMessage)} The two scenarios overlap within gross score and are not additive.</p>
-    <div class="experiment-grid">
-      <article class="experiment-card">
-        <span class="experiment-card__number">01</span>
-        <h3>Record first-putt distance</h3>
-        <p>Add an estimated starting distance for every putt. That separates three-putt frequency from the approach positions that created it.</p>
-      </article>
-      <article class="experiment-card">
-        <span class="experiment-card__number">02</span>
-        <h3>${recordedEventCodes.length ? 'Review recorded events' : 'Label penalty type'}</h3>
-        <p>${recordedEventCodes.length
-          ? `${recordedEventCodes.length} holes already have recorded event codes. Review those entries alongside the scorecard before adding more context; event labels alone do not establish a rule penalty count or cause.`
-          : 'Record scorecard event codes when available. A typed record can add context to triple-or-worse holes without treating labels as causes or formal penalty counts.'}</p>
-      </article>
-      <article class="experiment-card">
-        <span class="experiment-card__number">03</span>
-        <h3>Capture aim and club</h3>
-        <p>For tee shots, note intended target and club alongside outcome direction. That tests strategy without misreading a miss direction as curvature.</p>
-      </article>
+    <p class="note">${report.summary.detailed < 3 ? 'Small sample: fewer than three detailed rounds are selected. Treat these baselines as provisional. ' : ''}This is a suggested practice order, not a strokes-gained ranking. Targets and practice durations are proposed experiments, not professional benchmarks or forecasts. Missing observations are excluded.</p>
+    <div class="plan-grid">
+      ${cards.map((card, index) => `
+        <article class="plan-card" data-plan="${card.id}">
+          <span class="experiment-card__number">0${index + 1}</span>
+          <span class="plan-card__metric">${escapeHtml(card.metric)}</span>
+          <h3>${escapeHtml(card.title)}</h3>
+          <p>${escapeHtml(card.evidence)}</p>
+          <dl>
+            <dt>On the course</dt><dd>${escapeHtml(card.action)}</dd>
+            <dt>At practice</dt><dd>${escapeHtml(card.practice)}</dd>
+          </dl>
+          <div class="plan-target">${escapeHtml(card.target)}</div>
+          <p class="note">Coaching foundation: ${sourceLink(card.guide)}. Drills are adapted; the selection and targets come from this report.</p>
+        </article>
+      `).join('')}
     </div>
+    <div class="panel">
+      <h3>A repeatable 60-minute practice session</h3>
+      <p>Try this once or twice between rounds. Keep the same tasks for three rounds before reassessing; this schedule is a starting experiment, not an optimized prescription.</p>
+      <div class="practice-schedule" aria-label="Suggested practice allocation: 20 minutes putting, 20 minutes tee shots, 15 minutes approaches, 5 minutes review">
+        <div><strong>20 min</strong>Putting</div>
+        <div><strong>20 min</strong>Tee shots</div>
+        <div><strong>15 min</strong>Approaches</div>
+        <div><strong>5 min</strong>Review</div>
+      </div>
+      <div class="table-wrap">
+        <table class="plan-scoreboard">
+          <caption>Next-three-round scorecard: proposed targets, not promised improvement</caption>
+          <thead><tr><th>Measure</th><th>Current baseline</th><th>Trial target / record</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Triple-or-worse holes / 18</th><td>${number(evidence.triples.baseline)}</td><td>At most ${evidence.triples.target}</td></tr>
+            <tr><th scope="row">Three-plus-putt holes / 18</th><td>${number(evidence.putting.baseline)}</td><td>At most ${evidence.putting.target}; add first-putt distance</td></tr>
+            <tr><th scope="row">Pooled observed fairway hits</th><td>${tee.hits} / ${tee.observed} (${percent(tee.rate)})</td><td>Log club + intended target + outcome</td></tr>
+            <tr><th scope="row">Pooled observed GIR</th><td>${greens.hits} / ${greens.observed} (${percent(greens.rate)})</td><td>Log approach distance + lie + target</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">The pooled hole rates here use observed makes/attempts; other tabs retain means of rounded round percentages. Reassess at the same course and tee when possible. Three rounds give feedback, not proof that a change caused improvement.</p>
+    </div>
+    <details>
+      <summary>Pre-plan these repeat holes (${evidence.watchlist.length})</summary>
+      <div class="details-body">
+        <p>Highest observed average over par among the same course, tee, and hole played at least twice. Before your next visit, write down a safe landing area and your lay-up decision; do not infer the exact cause from the score.</p>
+        ${evidence.watchlist.length ? `<div class="table-wrap"><table>
+          <thead><tr><th>Course / tee</th><th>Hole</th><th>Mean over par</th><th>Playings</th></tr></thead>
+          <tbody>${evidence.watchlist.map((hole) => `<tr><th scope="row">${escapeHtml(hole.course)} / ${escapeHtml(hole.tee)}</th><td>${hole.number}</td><td>${formatOverPar(hole.averageOverPar, 2)}</td><td>${hole.rounds}</td></tr>`).join('')}</tbody>
+        </table></div>` : '<p>No repeated over-par hole has enough observations in this selection.</p>'}
+        <p><a href="#holes">Open scorecards</a> or <a href="#course-dna">consult the course research</a> before choosing an exact target.</p>
+      </div>
+    </details>
+    <details>
+      <summary>Keep the rest in perspective</summary>
+      <div class="details-body">
+        <p><strong>Round rhythm:</strong> ${escapeHtml(stages)} strokes over par per hole. Use a consistent routine across all 18; these averages do not establish fatigue or a reason for a different late-round swing.</p>
+        ${par3.count ? `<p><strong>Par-3 baseline:</strong> ${formatOverPar(par3.averageOverPar, 2)} per hole across ${par3.count} observations. Keep that context when judging longer holes; do not judge improvement only by chasing birdies.</p>` : ''}
+        <p><strong>Events:</strong> ${events.withCodes.count} event-marked holes average ${formatOverPar(events.withCodes.averageOverPar, 2)} versus ${formatOverPar(events.withoutCodes.averageOverPar, 2)} on ${events.withoutCodes.count} inspected blank-event holes. Course mix, hole difficulty, and shot decisions are intertwined; the difference is not recoverable strokes.</p>
+        <p><strong>Evidence boundary:</strong> scorecards do not reveal swing mechanics, actual shot distances, or a reliable best club. Do not prescribe a swing correction from left/right arrows or assume every missed green is an iron problem.</p>
+      </div>
+    </details>
+    <details>
+      <summary>Descriptive scoring ceilings, not improvement promises</summary>
+      <div class="details-body">
+        <p>${report.holeStats.aboveDouble} recorded strokes sit above double bogey and ${report.holeStats.excessPutts} putts sit above two putts per hole across this selection. These mathematical totals overlap and must not be added, treated as preventable, or presented as expected savings.</p>
+      </div>
+    </details>
   `);
 }
 
@@ -1223,6 +1374,7 @@ function renderAll() {
   renderDna(report);
   renderPriorities(report);
   renderMethod(report);
+  activateTab(state.activeTab);
   dom.status.hidden = true;
   dom.report.hidden = false;
 }
@@ -1234,6 +1386,25 @@ function assertPayload(payload) {
 }
 
 function bindEvents() {
+  dom.tabs.addEventListener('click', (event) => {
+    const tab = event.target.closest('[role="tab"]');
+    if (tab) activateTab(tab.getAttribute('aria-controls'), { updateHistory: true, focus: true, reveal: true });
+  });
+  dom.tabs.addEventListener('keydown', (event) => {
+    const tabs = [...dom.tabs.querySelectorAll('[role="tab"]')];
+    const current = tabs.indexOf(event.target);
+    if (current < 0) return;
+    const positions = { ArrowLeft: (current - 1 + tabs.length) % tabs.length, ArrowRight: (current + 1) % tabs.length, Home: 0, End: tabs.length - 1 };
+    if (!(event.key in positions)) return;
+    event.preventDefault();
+    activateTab(tabs[positions[event.key]].getAttribute('aria-controls'), { updateHistory: true, focus: true, reveal: true });
+  });
+  window.addEventListener('hashchange', () => {
+    if (state.payload) syncTabFromHash();
+  });
+  window.addEventListener('popstate', () => {
+    if (state.payload) syncTabFromHash();
+  });
   dom.courseFilter.addEventListener('change', () => {
     state.course = dom.courseFilter.value;
     state.heatmapCourse = null;
@@ -1307,6 +1478,7 @@ async function initialize() {
         : { courses: [] },
     };
     renderAll();
+    syncTabFromHash({ reveal: Boolean(location.hash) });
   } catch (error) {
     console.error(error);
     dom.report.hidden = true;

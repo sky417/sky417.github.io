@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { analyze, validateRounds, describeHoles, rollingAverage, courseHoleGroups } from '../../golf/analysis.mjs';
+import { analyze, validateRounds, describeHoles, rollingAverage, courseHoleGroups, improvementEvidence } from '../../golf/analysis.mjs';
 import { buildRounds } from './build-data.mjs';
 
 const makeRound = (overrides = {}) => ({
@@ -234,4 +234,62 @@ test('builder preserves null, zero, and blank supplementary data and rejects mal
     malformed.rounds[0].holes[key] = Array(17).fill(null);
     assert.throws(() => buildRounds(malformed), new RegExp(`${key} must contain exactly 18`));
   }
+});
+
+test('improvement baselines use gross hole data, not summary-only rounds or adjusted/lost strokes', () => {
+  const round = makeRound({ score: 95, putts: 39, adjustedGross: 90, estimatedLostStrokes: 99 });
+  round.holes[0].strokes = 7;
+  round.holes[0].putts = 3;
+  round.holes[1].strokes = 8;
+  round.holes[1].putts = 4;
+  const report = analyze([round, makeRound({ date: '2026-09-05', holes: null })]);
+  const before = JSON.stringify(report);
+  const evidence = improvementEvidence(report);
+  assert.deepEqual(evidence.triples, { baseline: 2, target: 1 });
+  assert.deepEqual(evidence.putting, { baseline: 2, target: 1 });
+  assert.equal(report.holeStats.excessPutts, 3);
+  assert.equal(JSON.stringify(report), before);
+});
+
+test('improvement evidence excludes unknown outcomes and par-3 tees while retaining false and blank observations', () => {
+  const round = makeRound({ score: 88 });
+  round.holes[0] = { ...round.holes[0], teeAccuracy: 'hit', gir: false, penaltyCodes: '' };
+  round.holes[1] = { ...round.holes[1], par: 3, strokes: 3, teeAccuracy: 'hit', gir: true, penaltyCodes: 'DD' };
+  round.holes[2] = { ...round.holes[2], teeAccuracy: 'left', gir: false, penaltyCodes: 'F' };
+  round.holes[3] = { ...round.holes[3], par: 5, teeAccuracy: 'right', penaltyCodes: null };
+  round.holes[4].teeAccuracy = 'unknown';
+  delete round.holes[5].teeAccuracy;
+  const evidence = improvementEvidence(analyze([round]));
+  assert.equal(evidence.tee.eligible, 17);
+  assert.equal(evidence.tee.observed, 3);
+  assert.equal(evidence.tee.hits, 1);
+  assert.equal(evidence.tee.left, 1);
+  assert.equal(evidence.tee.right, 1);
+  assert.equal(evidence.tee.missStats.count, 2);
+  assert.equal(evidence.greens.observed, 3);
+  assert.equal(evidence.greens.hits, 1);
+  assert.equal(evidence.events.observed, 3);
+  assert.equal(evidence.events.withCodes.count, 2);
+  assert.equal(evidence.events.withoutCodes.count, 1);
+  assert.equal(evidence.events.dropHoles, 1);
+});
+
+test('improvement watchlist requires repeated course, tee, and hole identities', () => {
+  const report = analyze([makeRound(), makeRound({ date: '2026-09-05' }), makeRound({ tee: 'Blue' })]);
+  const evidence = improvementEvidence(report);
+  assert.deepEqual(evidence.watchlist.map((hole) => hole.number), [1, 2, 3]);
+  assert.ok(evidence.watchlist.every((hole) => hole.rounds === 2 && hole.tee === 'White'));
+});
+
+test('improvement evidence distinguishes unavailable baselines from a zero-error record', () => {
+  const missing = improvementEvidence(analyze([makeRound({ holes: null })]));
+  assert.deepEqual(missing.triples, { baseline: null, target: null });
+  assert.deepEqual(missing.putting, { baseline: null, target: null });
+  assert.equal(missing.tee.rate, null);
+  assert.equal(missing.greens.rate, null);
+  assert.equal(missing.events.withCodes.averageOverPar, null);
+  const zero = improvementEvidence(analyze([makeRound()]));
+  assert.deepEqual(zero.triples, { baseline: 0, target: 0 });
+  assert.deepEqual(zero.putting, { baseline: 0, target: 0 });
+  assert.equal(zero.tee.observed, 0);
 });

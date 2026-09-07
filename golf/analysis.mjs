@@ -231,6 +231,48 @@ export function analyze(rounds) {
   };
 }
 
+export function improvementEvidence(report) {
+  const holes = report.allHoles;
+  const ratePer18 = (count) => holes.length ? count / holes.length * 18 : null;
+  const trialTarget = (rate) => rate === null ? null : Math.max(0, Math.round(rate) - 1);
+  const tripleRate = ratePer18(report.holeStats.distribution.triplePlus);
+  const puttRate = ratePer18(report.holeStats.threePlusCount);
+  const eligibleTees = holes.filter((hole) => hole.par === 4 || hole.par === 5);
+  const knownTees = eligibleTees.filter((hole) => ['hit', 'left', 'right', 'short', 'long', 'missed'].includes(hole.teeAccuracy));
+  const hitTees = knownTees.filter((hole) => hole.teeAccuracy === 'hit');
+  const knownGreens = holes.filter((hole) => typeof hole.gir === 'boolean');
+  const knownEvents = holes.filter((hole) => typeof hole.penaltyCodes === 'string');
+  return {
+    triples: { baseline: tripleRate, target: trialTarget(tripleRate) },
+    putting: { baseline: puttRate, target: trialTarget(puttRate) },
+    tee: {
+      eligible: eligibleTees.length,
+      observed: knownTees.length,
+      hits: hitTees.length,
+      rate: percent(hitTees.length, knownTees.length),
+      left: knownTees.filter((hole) => hole.teeAccuracy === 'left').length,
+      right: knownTees.filter((hole) => hole.teeAccuracy === 'right').length,
+      hitStats: describeHoles(hitTees),
+      missStats: describeHoles(knownTees.filter((hole) => hole.teeAccuracy !== 'hit')),
+    },
+    greens: {
+      observed: knownGreens.length,
+      hits: knownGreens.filter((hole) => hole.gir).length,
+      rate: percent(knownGreens.filter((hole) => hole.gir).length, knownGreens.length),
+    },
+    events: {
+      observed: knownEvents.length,
+      withCodes: describeHoles(knownEvents.filter((hole) => hole.penaltyCodes !== '')),
+      withoutCodes: describeHoles(knownEvents.filter((hole) => hole.penaltyCodes === '')),
+      dropHoles: knownEvents.filter((hole) => hole.penaltyCodes.includes('D')).length,
+    },
+    watchlist: [...report.repeatedHoles]
+      .filter((hole) => hole.rounds >= 2 && hole.averageOverPar > 0)
+      .sort((a, b) => b.averageOverPar - a.averageOverPar || b.rounds - a.rounds || a.course.localeCompare(b.course) || a.number - b.number)
+      .slice(0, 3),
+  };
+}
+
 export function courseHoleGroups(analysis, research) {
   const groups = new Map();
   for (const hole of analysis.allHoles) {

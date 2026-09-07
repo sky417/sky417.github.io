@@ -26,6 +26,10 @@
   box-sizing: border-box;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 86px;
@@ -141,32 +145,56 @@ a {
 .brand__mark span:nth-child(2) { height: 13px; }
 .brand__mark span:nth-child(3) { height: 10px; opacity: 0.82; }
 
-.section-nav {
+.report-tabs {
+  position: sticky;
+  top: 64px;
+  z-index: 12;
   display: flex;
   align-items: center;
-  gap: clamp(14px, 2.2vw, 32px);
+  gap: 6px;
+  padding: 12px max(20px, calc((100vw - var(--max)) / 2));
+  border-bottom: 1px solid var(--line);
+  background: var(--bg);
   overflow-x: auto;
-  scrollbar-width: none;
+  scrollbar-width: thin;
+  scroll-padding-inline: 20px;
 }
 
-.section-nav::-webkit-scrollbar {
-  display: none;
-}
-
-.section-nav a {
-  padding: 21px 0 18px;
+.report-tabs [role="tab"] {
+  flex: 0 0 auto;
+  min-height: 44px;
+  padding: 10px 16px;
   color: var(--muted);
-  border-bottom: 2px solid transparent;
-  font-size: 0.77rem;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  background: transparent;
+  font-size: 0.8rem;
   font-weight: 700;
-  letter-spacing: 0.05em;
-  text-decoration: none;
   white-space: nowrap;
+  cursor: pointer;
 }
 
-.section-nav a:hover {
+.report-tabs [role="tab"]:hover {
   color: var(--ink);
-  border-color: var(--green-bright);
+  background: var(--green-pale);
+}
+
+.report-tabs [aria-selected="true"] {
+  color: var(--white);
+  background: var(--ink);
+}
+
+.report-tabs [aria-selected="true"]:hover {
+  color: var(--white);
+  background: var(--green);
+}
+
+.topbar__plan {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.76rem;
+  text-decoration: none;
 }
 
 main {
@@ -176,13 +204,13 @@ main {
 .hero {
   position: relative;
   width: min(calc(100% - 40px), var(--max));
-  min-height: 575px;
+  min-height: 220px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(340px, 0.92fr);
+  grid-template-columns: minmax(0, 1fr) 230px;
   align-items: center;
-  gap: clamp(30px, 7vw, 96px);
-  padding: 74px 0 82px;
+  gap: 32px;
+  padding: 32px 0;
 }
 
 .hero__copy {
@@ -202,10 +230,10 @@ main {
 .hero h1 {
   margin: 0;
   color: var(--ink-strong);
-  font-size: clamp(4rem, 8vw, 7.4rem);
+  font-size: clamp(2.4rem, 4.5vw, 4.2rem);
   font-weight: 730;
   letter-spacing: -0.07em;
-  line-height: 0.88;
+  line-height: 1.08;
 }
 
 .hero h1 em {
@@ -217,9 +245,9 @@ main {
 
 .hero__lede {
   max-width: 610px;
-  margin: 32px 0 26px;
+  margin: 16px 0;
   color: #53635d;
-  font-size: clamp(1.05rem, 1.6vw, 1.28rem);
+  font-size: 1rem;
 }
 
 .hero__meta {
@@ -313,7 +341,7 @@ main {
   z-index: 8;
   width: min(calc(100% - 40px), var(--max));
   min-height: 92px;
-  margin: 0 auto -46px;
+  margin: 0 auto 20px;
   padding: 18px 20px 18px 24px;
   display: flex;
   align-items: center;
@@ -438,7 +466,9 @@ select:disabled {
 }
 
 .report-section {
-  padding: 120px max(20px, calc((100vw - var(--max)) / 2));
+  padding: 44px max(20px, calc((100vw - var(--max)) / 2)) 64px;
+  min-height: 50vh;
+  scroll-margin-top: 72px;
 }
 
 .report-section--tint {
@@ -451,8 +481,8 @@ select:disabled {
 }
 
 .report-section--compact {
-  padding-top: 90px;
-  padding-bottom: 100px;
+  padding-top: 44px;
+  padding-bottom: 64px;
 }
 
 .section-heading {
@@ -1310,6 +1340,15 @@ td strong {
   gap: 8px;
 }
 
+.dna-controls label {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.dna-controls select {
+  max-width: 100%;
+}
+
 .hole-fact {
   margin-top: 16px;
   padding: 20px;
@@ -1384,6 +1423,112 @@ td strong {
   padding-left: 18px;
   color: #d0dfd9;
   font-size: 0.78rem;
+}
+
+.plan-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.plan-card {
+  min-width: 0;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--white);
+}
+
+.plan-card__metric {
+  display: block;
+  margin: 18px 0 4px;
+  color: var(--green);
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.plan-card h3 {
+  margin: 0 0 12px;
+  font-size: 1.12rem;
+}
+
+.plan-card p,
+.plan-card dd {
+  color: #53635d;
+  font-size: 0.86rem;
+}
+
+.plan-card dl {
+  margin: 18px 0;
+}
+
+.plan-card dt {
+  margin-top: 14px;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.plan-card dd {
+  margin: 4px 0 0;
+}
+
+.plan-target {
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: var(--green-pale);
+  font-size: 0.83rem;
+}
+
+.plan-intro,
+.plan-callout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px;
+  border-radius: var(--radius-md);
+  background: var(--green-pale);
+}
+
+.plan-callout {
+  margin-top: 24px;
+}
+
+.plan-intro p,
+.plan-callout p {
+  margin: 4px 0 0;
+}
+
+.plan-callout a {
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.practice-schedule {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1.5fr 0.5fr;
+  gap: 5px;
+  margin: 18px 0;
+}
+
+.practice-schedule > div {
+  min-width: 0;
+  padding: 16px 12px;
+  border-radius: 10px;
+  color: var(--white);
+  background: var(--ink);
+  font-size: 0.78rem;
+}
+
+.practice-schedule > div:nth-child(2) { background: var(--green); }
+.practice-schedule > div:nth-child(3) { color: var(--ink); background: var(--green-pale); }
+.practice-schedule > div:nth-child(4) { color: var(--ink); background: var(--amber-pale); }
+
+.practice-schedule strong {
+  display: block;
+  font-size: 1.2rem;
 }
 
 .scenario-grid {
@@ -1622,36 +1767,23 @@ table.sr-only {
   }
 
   .topbar__inner {
-    width: 100%;
-    min-height: 98px;
-    padding: 12px 20px 0;
-    display: block;
+    min-height: 64px;
+    gap: 12px;
   }
 
   .brand {
-    margin-bottom: 8px;
-  }
-
-  .section-nav {
-    margin: 0 -20px;
-    padding: 0 20px;
-  }
-
-  .section-nav a {
-    padding: 9px 0 12px;
+    margin-bottom: 0;
   }
 
   .hero {
     min-height: 0;
     grid-template-columns: 1fr;
     gap: 24px;
-    padding: 60px 0 82px;
+    padding: 26px 0;
   }
 
   .hero__art {
-    width: min(100%, 500px);
-    margin: -20px auto -30px;
-    opacity: 0.8;
+    display: none;
   }
 
   .filter-dock {
@@ -1672,8 +1804,8 @@ table.sr-only {
   }
 
   .report-section {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 32px;
+    padding-bottom: 48px;
   }
 
   .rhythm-bars,
@@ -1681,6 +1813,7 @@ table.sr-only {
   .par-grid,
   .shape-grid,
   .band-grid,
+  .plan-grid,
   .scenario-grid {
     grid-template-columns: 1fr;
   }
@@ -1704,11 +1837,11 @@ table.sr-only {
   }
 
   .hero h1 {
-    font-size: clamp(3.5rem, 20vw, 5.4rem);
+    font-size: clamp(2.3rem, 9vw, 3.3rem);
   }
 
   .hero__lede {
-    margin-top: 24px;
+    margin-top: 14px;
   }
 
   .filter-dock {
@@ -1767,9 +1900,15 @@ table.sr-only {
   }
 
   .download-row,
+  .plan-intro,
+  .plan-callout,
   .site-footer {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .practice-schedule {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
