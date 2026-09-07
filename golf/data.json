@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "title": "2026 season report",
   "through": "2026-09-06",
-  "generatedAt": "2026-09-07T04:47:37.993Z",
+  "generatedAt": "2026-09-07T09:38:51.347Z",
   "rounds": [
     {
       "date": "2026-09-06",
@@ -1371,9 +1371,190 @@
       "gir": 17,
       "fir": 29,
       "scoreValue": 35.1,
-      "adjustedGross": null,
-      "detailSource": "Round summary only; the detailed scorecard was not available.",
-      "holes": null
+      "adjustedGross": 106,
+      "detailSource": "Captured scorecard; gross strokes and putts reconcile to the round total.",
+      "holes": [
+        {
+          "number": 1,
+          "par": 4,
+          "strokes": 7,
+          "putts": 3,
+          "yards": 339,
+          "strokeIndex": 12,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 2,
+          "par": 5,
+          "strokes": 6,
+          "putts": 2,
+          "yards": 455,
+          "strokeIndex": 16,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 3,
+          "par": 3,
+          "strokes": 3,
+          "putts": 2,
+          "yards": 169,
+          "strokeIndex": 18,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 4,
+          "par": 5,
+          "strokes": 8,
+          "putts": 2,
+          "yards": 459,
+          "strokeIndex": 2,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 5,
+          "par": 4,
+          "strokes": 4,
+          "putts": 2,
+          "yards": 343,
+          "strokeIndex": 10,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 6,
+          "par": 4,
+          "strokes": 4,
+          "putts": 2,
+          "yards": 330,
+          "strokeIndex": 8,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 7,
+          "par": 3,
+          "strokes": 6,
+          "putts": 2,
+          "yards": 193,
+          "strokeIndex": 4,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 8,
+          "par": 4,
+          "strokes": 6,
+          "putts": 2,
+          "yards": 310,
+          "strokeIndex": 14,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 9,
+          "par": 4,
+          "strokes": 7,
+          "putts": 2,
+          "yards": 353,
+          "strokeIndex": 6,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 10,
+          "par": 4,
+          "strokes": 7,
+          "putts": 2,
+          "yards": 423,
+          "strokeIndex": 1,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 11,
+          "par": 4,
+          "strokes": 5,
+          "putts": 1,
+          "yards": 396,
+          "strokeIndex": 7,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 12,
+          "par": 5,
+          "strokes": 8,
+          "putts": 3,
+          "yards": 475,
+          "strokeIndex": 11,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 13,
+          "par": 3,
+          "strokes": 5,
+          "putts": 2,
+          "yards": 180,
+          "strokeIndex": 15,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 14,
+          "par": 4,
+          "strokes": 8,
+          "putts": 3,
+          "yards": 402,
+          "strokeIndex": 3,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 15,
+          "par": 4,
+          "strokes": 4,
+          "putts": 1,
+          "yards": 369,
+          "strokeIndex": 13,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 16,
+          "par": 3,
+          "strokes": 4,
+          "putts": 2,
+          "yards": 160,
+          "strokeIndex": 17,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 17,
+          "par": 4,
+          "strokes": 6,
+          "putts": 2,
+          "yards": 431,
+          "strokeIndex": 5,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 18,
+          "par": 5,
+          "strokes": 8,
+          "putts": 3,
+          "yards": 500,
+          "strokeIndex": 9,
+          "teeAccuracy": null,
+          "gir": null
+        }
+      ]
     },
     {
       "date": "2026-06-06",
@@ -1384,9 +1565,190 @@
       "gir": 28,
       "fir": 36,
       "scoreValue": 13.5,
-      "adjustedGross": null,
-      "detailSource": "Round summary only; the detailed scorecard was not available.",
-      "holes": null
+      "adjustedGross": 86,
+      "detailSource": "Captured scorecard; gross strokes and putts reconcile to the round total.",
+      "holes": [
+        {
+          "number": 1,
+          "par": 4,
+          "strokes": 4,
+          "putts": 2,
+          "yards": 375,
+          "strokeIndex": 11,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 2,
+          "par": 4,
+          "strokes": 4,
+          "putts": 1,
+          "yards": 369,
+          "strokeIndex": 7,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 3,
+          "par": 5,
+          "strokes": 6,
+          "putts": 2,
+          "yards": 501,
+          "strokeIndex": 9,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 4,
+          "par": 4,
+          "strokes": 4,
+          "putts": 1,
+          "yards": 429,
+          "strokeIndex": 3,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 5,
+          "par": 5,
+          "strokes": 9,
+          "putts": 2,
+          "yards": 474,
+          "strokeIndex": 17,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 6,
+          "par": 3,
+          "strokes": 3,
+          "putts": 2,
+          "yards": 149,
+          "strokeIndex": 13,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 7,
+          "par": 4,
+          "strokes": 5,
+          "putts": 2,
+          "yards": 367,
+          "strokeIndex": 1,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 8,
+          "par": 3,
+          "strokes": 4,
+          "putts": 1,
+          "yards": 184,
+          "strokeIndex": 15,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 9,
+          "par": 4,
+          "strokes": 4,
+          "putts": 2,
+          "yards": 344,
+          "strokeIndex": 5,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 10,
+          "par": 4,
+          "strokes": 6,
+          "putts": 3,
+          "yards": 379,
+          "strokeIndex": 14,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 11,
+          "par": 3,
+          "strokes": 3,
+          "putts": 1,
+          "yards": 137,
+          "strokeIndex": 18,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 12,
+          "par": 4,
+          "strokes": 5,
+          "putts": 3,
+          "yards": 410,
+          "strokeIndex": 4,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 13,
+          "par": 5,
+          "strokes": 5,
+          "putts": 2,
+          "yards": 501,
+          "strokeIndex": 12,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 14,
+          "par": 4,
+          "strokes": 4,
+          "putts": 1,
+          "yards": 401,
+          "strokeIndex": 10,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 15,
+          "par": 3,
+          "strokes": 4,
+          "putts": 2,
+          "yards": 144,
+          "strokeIndex": 16,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 16,
+          "par": 4,
+          "strokes": 5,
+          "putts": 2,
+          "yards": 421,
+          "strokeIndex": 2,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 17,
+          "par": 4,
+          "strokes": 5,
+          "putts": 2,
+          "yards": 403,
+          "strokeIndex": 6,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 18,
+          "par": 5,
+          "strokes": 6,
+          "putts": 1,
+          "yards": 495,
+          "strokeIndex": 8,
+          "teeAccuracy": null,
+          "gir": null
+        }
+      ]
     },
     {
       "date": "2026-05-16",
@@ -1397,9 +1759,190 @@
       "gir": 6,
       "fir": 21,
       "scoreValue": 26.2,
-      "adjustedGross": null,
-      "detailSource": "Round summary only; the detailed scorecard was not available.",
-      "holes": null
+      "adjustedGross": 96,
+      "detailSource": "Captured scorecard; gross strokes and putts reconcile to the round total.",
+      "holes": [
+        {
+          "number": 1,
+          "par": 4,
+          "strokes": 7,
+          "putts": 2,
+          "yards": 367,
+          "strokeIndex": 5,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 2,
+          "par": 5,
+          "strokes": 9,
+          "putts": 3,
+          "yards": 451,
+          "strokeIndex": 17,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 3,
+          "par": 4,
+          "strokes": 5,
+          "putts": 2,
+          "yards": 399,
+          "strokeIndex": 3,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 4,
+          "par": 3,
+          "strokes": 4,
+          "putts": 2,
+          "yards": 176,
+          "strokeIndex": 11,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 5,
+          "par": 4,
+          "strokes": 5,
+          "putts": 1,
+          "yards": 400,
+          "strokeIndex": 7,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 6,
+          "par": 5,
+          "strokes": 6,
+          "putts": 2,
+          "yards": 475,
+          "strokeIndex": 9,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 7,
+          "par": 4,
+          "strokes": 4,
+          "putts": 1,
+          "yards": 329,
+          "strokeIndex": 15,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 8,
+          "par": 3,
+          "strokes": 3,
+          "putts": 2,
+          "yards": 148,
+          "strokeIndex": 13,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 9,
+          "par": 4,
+          "strokes": 6,
+          "putts": 2,
+          "yards": 380,
+          "strokeIndex": 1,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 10,
+          "par": 4,
+          "strokes": 5,
+          "putts": 2,
+          "yards": 341,
+          "strokeIndex": 8,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 11,
+          "par": 4,
+          "strokes": 5,
+          "putts": 1,
+          "yards": 358,
+          "strokeIndex": 12,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 12,
+          "par": 4,
+          "strokes": 5,
+          "putts": 2,
+          "yards": 400,
+          "strokeIndex": 2,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 13,
+          "par": 3,
+          "strokes": 5,
+          "putts": 3,
+          "yards": 160,
+          "strokeIndex": 10,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 14,
+          "par": 5,
+          "strokes": 7,
+          "putts": 2,
+          "yards": 518,
+          "strokeIndex": 16,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 15,
+          "par": 5,
+          "strokes": 7,
+          "putts": 2,
+          "yards": 529,
+          "strokeIndex": 4,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 16,
+          "par": 4,
+          "strokes": 5,
+          "putts": 2,
+          "yards": 369,
+          "strokeIndex": 6,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 17,
+          "par": 4,
+          "strokes": 4,
+          "putts": 1,
+          "yards": 299,
+          "strokeIndex": 18,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 18,
+          "par": 3,
+          "strokes": 4,
+          "putts": 2,
+          "yards": 159,
+          "strokeIndex": 14,
+          "teeAccuracy": null,
+          "gir": null
+        }
+      ]
     },
     {
       "date": "2026-05-09",
@@ -1407,12 +1950,193 @@
       "tee": "Tee 2",
       "score": 115,
       "putts": 38,
-      "gir": null,
+      "gir": 0,
       "fir": 36,
       "scoreValue": 43.8,
-      "adjustedGross": null,
-      "detailSource": "Round summary only; the detailed scorecard was not available.",
-      "holes": null
+      "adjustedGross": 115,
+      "detailSource": "Captured scorecard; gross strokes and putts reconcile to the round total.",
+      "holes": [
+        {
+          "number": 1,
+          "par": 4,
+          "strokes": 5,
+          "putts": 2,
+          "yards": 339,
+          "strokeIndex": 12,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 2,
+          "par": 5,
+          "strokes": 8,
+          "putts": 2,
+          "yards": 455,
+          "strokeIndex": 16,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 3,
+          "par": 3,
+          "strokes": 4,
+          "putts": 1,
+          "yards": 169,
+          "strokeIndex": 18,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 4,
+          "par": 5,
+          "strokes": 8,
+          "putts": 2,
+          "yards": 459,
+          "strokeIndex": 2,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 5,
+          "par": 4,
+          "strokes": 6,
+          "putts": 2,
+          "yards": 343,
+          "strokeIndex": 10,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 6,
+          "par": 4,
+          "strokes": 6,
+          "putts": 2,
+          "yards": 330,
+          "strokeIndex": 8,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 7,
+          "par": 3,
+          "strokes": 5,
+          "putts": 1,
+          "yards": 193,
+          "strokeIndex": 4,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 8,
+          "par": 4,
+          "strokes": 6,
+          "putts": 3,
+          "yards": 310,
+          "strokeIndex": 14,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 9,
+          "par": 4,
+          "strokes": 7,
+          "putts": 2,
+          "yards": 353,
+          "strokeIndex": 6,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 10,
+          "par": 4,
+          "strokes": 7,
+          "putts": 3,
+          "yards": 423,
+          "strokeIndex": 1,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 11,
+          "par": 4,
+          "strokes": 6,
+          "putts": 2,
+          "yards": 396,
+          "strokeIndex": 7,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 12,
+          "par": 5,
+          "strokes": 8,
+          "putts": 2,
+          "yards": 475,
+          "strokeIndex": 11,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 13,
+          "par": 3,
+          "strokes": 5,
+          "putts": 2,
+          "yards": 180,
+          "strokeIndex": 15,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 14,
+          "par": 4,
+          "strokes": 7,
+          "putts": 2,
+          "yards": 402,
+          "strokeIndex": 3,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 15,
+          "par": 4,
+          "strokes": 6,
+          "putts": 2,
+          "yards": 369,
+          "strokeIndex": 13,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 16,
+          "par": 3,
+          "strokes": 6,
+          "putts": 3,
+          "yards": 160,
+          "strokeIndex": 17,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 17,
+          "par": 4,
+          "strokes": 7,
+          "putts": 2,
+          "yards": 431,
+          "strokeIndex": 5,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 18,
+          "par": 5,
+          "strokes": 8,
+          "putts": 3,
+          "yards": 500,
+          "strokeIndex": 9,
+          "teeAccuracy": null,
+          "gir": null
+        }
+      ]
     },
     {
       "date": "2026-04-25",
@@ -1423,9 +2147,190 @@
       "gir": 6,
       "fir": 36,
       "scoreValue": 38,
-      "adjustedGross": null,
-      "detailSource": "Round summary only; the detailed scorecard was not available.",
-      "holes": null
+      "adjustedGross": 109,
+      "detailSource": "Captured scorecard; gross strokes and putts reconcile to the round total.",
+      "holes": [
+        {
+          "number": 1,
+          "par": 4,
+          "strokes": 5,
+          "putts": 2,
+          "yards": 339,
+          "strokeIndex": 12,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 2,
+          "par": 5,
+          "strokes": 8,
+          "putts": 3,
+          "yards": 455,
+          "strokeIndex": 16,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 3,
+          "par": 3,
+          "strokes": 4,
+          "putts": 2,
+          "yards": 169,
+          "strokeIndex": 18,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 4,
+          "par": 5,
+          "strokes": 6,
+          "putts": 2,
+          "yards": 459,
+          "strokeIndex": 2,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 5,
+          "par": 4,
+          "strokes": 8,
+          "putts": 3,
+          "yards": 343,
+          "strokeIndex": 10,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 6,
+          "par": 4,
+          "strokes": 8,
+          "putts": 2,
+          "yards": 330,
+          "strokeIndex": 8,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 7,
+          "par": 3,
+          "strokes": 3,
+          "putts": 2,
+          "yards": 193,
+          "strokeIndex": 4,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 8,
+          "par": 4,
+          "strokes": 5,
+          "putts": 2,
+          "yards": 310,
+          "strokeIndex": 14,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 9,
+          "par": 4,
+          "strokes": 5,
+          "putts": 2,
+          "yards": 353,
+          "strokeIndex": 6,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 10,
+          "par": 4,
+          "strokes": 6,
+          "putts": 3,
+          "yards": 423,
+          "strokeIndex": 1,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 11,
+          "par": 4,
+          "strokes": 6,
+          "putts": 2,
+          "yards": 396,
+          "strokeIndex": 7,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 12,
+          "par": 5,
+          "strokes": 6,
+          "putts": 2,
+          "yards": 475,
+          "strokeIndex": 11,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 13,
+          "par": 3,
+          "strokes": 6,
+          "putts": 2,
+          "yards": 180,
+          "strokeIndex": 15,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 14,
+          "par": 4,
+          "strokes": 7,
+          "putts": 2,
+          "yards": 402,
+          "strokeIndex": 3,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 15,
+          "par": 4,
+          "strokes": 8,
+          "putts": 2,
+          "yards": 369,
+          "strokeIndex": 13,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 16,
+          "par": 3,
+          "strokes": 3,
+          "putts": 1,
+          "yards": 160,
+          "strokeIndex": 17,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 17,
+          "par": 4,
+          "strokes": 8,
+          "putts": 3,
+          "yards": 431,
+          "strokeIndex": 5,
+          "teeAccuracy": null,
+          "gir": null
+        },
+        {
+          "number": 18,
+          "par": 5,
+          "strokes": 7,
+          "putts": 1,
+          "yards": 500,
+          "strokeIndex": 9,
+          "teeAccuracy": null,
+          "gir": null
+        }
+      ]
     }
   ],
   "research": {
